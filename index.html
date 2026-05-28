@@ -50,7 +50,11 @@
         <div class="completion" id="completion" hidden>
           <h2>All done</h2>
           <p id="completionStats"></p>
-          <button id="restartBtn" class="button button--primary">Restart</button>
+          <p id="completionHint" class="completion__hint"></p>
+          <div class="completion__actions">
+            <button id="continueBtn" class="button">Continue Unknown</button>
+            <button id="restartBtn" class="button button--primary">Restart All</button>
+          </div>
         </div>
       </main>
 
@@ -58,7 +62,20 @@
         <button class="button" id="leftBtn">Swipe Left (Review)</button>
         <button class="button button--primary" id="flipBtn">Flip</button>
         <button class="button" id="rightBtn">Swipe Right (Know)</button>
+        <button class="button button--ghost" id="undoBtn" disabled>Undo</button>
         <button class="button button--ghost" id="resetBtn">Reset</button>
+      </section>
+
+      <section class="view-toggle" aria-label="Front of card view">
+        <span class="view-toggle__label">Front view</span>
+        <div class="view-toggle__group" role="group" aria-label="Front view options">
+          <input type="radio" name="viewMode" id="viewBoth" value="both" checked>
+          <label for="viewBoth">Image + Text</label>
+          <input type="radio" name="viewMode" id="viewImage" value="image">
+          <label for="viewImage">Image only</label>
+          <input type="radio" name="viewMode" id="viewText" value="text">
+          <label for="viewText">Text only</label>
+        </div>
       </section>
 
       <footer class="footer">

@@ -11,27 +11,101 @@ const leftCount = document.getElementById("leftCount");
 const rightCount = document.getElementById("rightCount");
 const completion = document.getElementById("completion");
 const completionStats = document.getElementById("completionStats");
+const completionHint = document.getElementById("completionHint");
+const continueBtn = document.getElementById("continueBtn");
+const viewRadios = document.querySelectorAll("input[name=\"viewMode\"]");
 
 const leftBtn = document.getElementById("leftBtn");
 const rightBtn = document.getElementById("rightBtn");
 const flipBtn = document.getElementById("flipBtn");
+const undoBtn = document.getElementById("undoBtn");
 const resetBtn = document.getElementById("resetBtn");
 const restartBtn = document.getElementById("restartBtn");
 
-const state = {
+const STORAGE_KEY = "historySwipeState";
+
+const buildDeck = (ids) => {
+  if (!Array.isArray(ids)) {
+    return [];
+  }
+  return ids.filter((id) => Number.isInteger(id) && id >= 0 && id < figures.length);
+};
+
+const buildHistory = (items) => {
+  if (!Array.isArray(items)) {
+    return [];
+  }
+  return items
+    .filter(
+      (entry) =>
+        entry &&
+        (entry.direction === "left" || entry.direction === "right") &&
+        Number.isInteger(entry.cardId) &&
+        entry.cardId >= 0 &&
+        entry.cardId < figures.length
+    )
+    .map((entry) => ({ cardId: entry.cardId, direction: entry.direction }));
+};
+
+const createInitialState = () => ({
+  deck: figures.map((_, index) => index),
   index: 0,
   left: 0,
   right: 0,
+  unknown: [],
+  history: [],
   dragging: false,
   startX: 0,
   startY: 0,
   pointerId: null,
-};
+});
+
+const state = createInitialState();
 
 const swipeThreshold = () => Math.min(window.innerWidth * 0.25, 160);
 
+const applyViewMode = (mode) => {
+  card.dataset.view = mode;
+};
+
+const saveState = (override = {}) => {
+  const payload = {
+    deck: state.deck,
+    index: state.index,
+    left: state.left,
+    right: state.right,
+    unknown: state.unknown,
+    history: state.history,
+    viewMode: override.viewMode || card.dataset.view || "both",
+  };
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+};
+
+const loadState = () => {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (!raw) {
+    return null;
+  }
+  try {
+    const stored = JSON.parse(raw);
+    const deck = buildDeck(stored.deck);
+    if (deck.length > 0) {
+      state.deck = deck;
+    }
+    const index = Number.isFinite(stored.index) ? Math.floor(stored.index) : 0;
+    state.index = Math.min(Math.max(index, 0), state.deck.length);
+    state.left = Number.isFinite(stored.left) ? stored.left : 0;
+    state.right = Number.isFinite(stored.right) ? stored.right : 0;
+    state.unknown = buildDeck(stored.unknown);
+    state.history = buildHistory(stored.history);
+    return stored.viewMode || null;
+  } catch (error) {
+    return null;
+  }
+};
+
 const updateProgress = () => {
-  const total = figures.length;
+  const total = state.deck.length;
   progressText.textContent = `${Math.min(state.index, total)} / ${total}`;
   leftCount.textContent = `Review: ${state.left}`;
   rightCount.textContent = `Known: ${state.right}`;
@@ -39,12 +113,33 @@ const updateProgress = () => {
   progressFill.style.width = `${Math.min(progress, 100)}%`;
 };
 
+const updateUndoButton = () => {
+  if (!undoBtn) {
+    return;
+  }
+  undoBtn.disabled = state.history.length === 0;
+};
+
+const updateCompletion = () => {
+  const remaining = state.unknown.length;
+  completionStats.textContent = `Known: ${state.right} | Review: ${state.left}`;
+  if (remaining > 0) {
+    completionHint.textContent = `${remaining} card${remaining === 1 ? "" : "s"} left to review.`;
+    continueBtn.disabled = false;
+    continueBtn.textContent = `Continue Unknown (${remaining})`;
+  } else {
+    completionHint.textContent = "No cards left to review.";
+    continueBtn.disabled = true;
+    continueBtn.textContent = "Continue Unknown";
+  }
+};
+
 const showCompletion = () => {
   if (cardWrap) {
     cardWrap.style.display = "none";
   }
   completion.hidden = false;
-  completionStats.textContent = `Known: ${state.right} | Review: ${state.left}`;
+  updateCompletion();
 };
 
 const showCard = () => {
@@ -55,14 +150,24 @@ const showCard = () => {
 };
 
 const setCardData = () => {
-  const total = figures.length;
-  if (state.index >= total) {
+  const total = state.deck.length;
+  if (total === 0 || state.index >= total) {
     showCompletion();
     updateProgress();
+    updateUndoButton();
+    saveState();
     return;
   }
 
-  const figure = figures[state.index];
+  const figureId = state.deck[state.index];
+  const figure = figures[figureId];
+  if (!figure) {
+    state.index += 1;
+    setCardData();
+    return;
+  }
+
+  showCard();
   figureImage.src = figure.image;
   figureImage.alt = figure.name;
   figureDescription.textContent = figure.description;
@@ -75,19 +180,23 @@ const setCardData = () => {
   card.style.transition = "";
 
   updateProgress();
+  updateUndoButton();
+  saveState();
 };
 
 const recordSwipe = (direction) => {
+  state.history.push({ cardId: state.deck[state.index], direction });
   if (direction === "right") {
     state.right += 1;
   } else {
     state.left += 1;
+    state.unknown.push(state.deck[state.index]);
   }
   state.index += 1;
 };
 
 const animateSwipe = (direction) => {
-  if (state.index >= figures.length) {
+  if (state.index >= state.deck.length) {
     return;
   }
   const travel = direction === "right" ? window.innerWidth * 1.2 : -window.innerWidth * 1.2;
@@ -112,14 +221,14 @@ const resetPosition = () => {
 };
 
 const handleFlip = () => {
-  if (state.index >= figures.length) {
+  if (state.index >= state.deck.length) {
     return;
   }
   card.classList.toggle("is-flipped");
 };
 
 const handlePointerDown = (event) => {
-  if (state.index >= figures.length) {
+  if (state.index >= state.deck.length) {
     return;
   }
   state.dragging = true;
@@ -190,19 +299,61 @@ const handlePointerCancel = () => {
   resetPosition();
 };
 
-const handleReset = () => {
+const handleUndo = () => {
+  if (state.history.length === 0) {
+    return;
+  }
+  const last = state.history.pop();
+  state.index = Math.max(state.index - 1, 0);
+  if (last.direction === "right") {
+    state.right = Math.max(state.right - 1, 0);
+  } else {
+    state.left = Math.max(state.left - 1, 0);
+    const removeIndex = state.unknown.lastIndexOf(last.cardId);
+    if (removeIndex >= 0) {
+      state.unknown.splice(removeIndex, 1);
+    }
+  }
+  setCardData();
+};
+
+const startRound = (deckIds) => {
+  state.deck = buildDeck(deckIds);
   state.index = 0;
   state.left = 0;
   state.right = 0;
-  showCard();
+  state.unknown = [];
+  state.history = [];
   setCardData();
+};
+
+const handleReset = () => {
+  const fullDeck = figures.map((_, index) => index);
+  startRound(fullDeck);
+};
+
+const handleContinueUnknown = () => {
+  if (state.unknown.length === 0) {
+    return;
+  }
+  const nextDeck = [...state.unknown];
+  startRound(nextDeck);
 };
 
 leftBtn.addEventListener("click", () => animateSwipe("left"));
 rightBtn.addEventListener("click", () => animateSwipe("right"));
 flipBtn.addEventListener("click", handleFlip);
+undoBtn.addEventListener("click", handleUndo);
 resetBtn.addEventListener("click", handleReset);
 restartBtn.addEventListener("click", handleReset);
+continueBtn.addEventListener("click", handleContinueUnknown);
+
+viewRadios.forEach((radio) => {
+  radio.addEventListener("change", (event) => {
+    applyViewMode(event.target.value);
+    saveState({ viewMode: event.target.value });
+  });
+});
 
 card.addEventListener("pointerdown", handlePointerDown);
 card.addEventListener("pointermove", handlePointerMove);
@@ -217,9 +368,25 @@ window.addEventListener("keydown", (event) => {
   } else if (event.key === " " || event.key === "ArrowUp") {
     event.preventDefault();
     handleFlip();
+  } else if (event.key.toLowerCase() === "u") {
+    handleUndo();
   } else if (event.key.toLowerCase() === "r") {
     handleReset();
   }
 });
+
+const storedViewMode = loadState();
+if (storedViewMode) {
+  const storedRadio = document.querySelector(`input[name="viewMode"][value="${storedViewMode}"]`);
+  if (storedRadio) {
+    storedRadio.checked = true;
+  }
+  applyViewMode(storedViewMode);
+} else {
+  const initialView = document.querySelector("input[name=\"viewMode\"]:checked");
+  if (initialView) {
+    applyViewMode(initialView.value);
+  }
+}
 
 setCardData();
