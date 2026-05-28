@@ -64,6 +64,7 @@ const createInitialState = () => ({
   right: 0,
   unknown: [],
   history: [],
+  randomize: false,
   dragging: false,
   startX: 0,
   startY: 0,
@@ -95,6 +96,7 @@ const applyTheme = (theme) => {
 };
 
 const saveState = (override = {}) => {
+  const nextRandomize = typeof override.randomize === "boolean" ? override.randomize : state.randomize;
   const payload = {
     deck: state.deck,
     index: state.index,
@@ -104,6 +106,7 @@ const saveState = (override = {}) => {
     history: state.history,
     viewMode: override.viewMode || card.dataset.view || "both",
     theme: override.theme || document.body.dataset.theme || "light",
+    randomize: nextRandomize,
   };
   localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
 };
@@ -125,9 +128,11 @@ const loadState = () => {
     state.right = Number.isFinite(stored.right) ? stored.right : 0;
     state.unknown = buildDeck(stored.unknown);
     state.history = buildHistory(stored.history);
+    state.randomize = stored.randomize === true;
     return {
       viewMode: stored.viewMode || null,
       theme: stored.theme || null,
+      randomize: stored.randomize === true,
     };
   } catch (error) {
     return null;
@@ -148,6 +153,15 @@ const updateUndoButton = () => {
     return;
   }
   undoBtn.disabled = state.history.length === 0;
+};
+
+const updateRandomizeButton = () => {
+  if (!shuffleBtn) {
+    return;
+  }
+  shuffleBtn.classList.toggle("is-active", state.randomize);
+  shuffleBtn.setAttribute("aria-pressed", String(state.randomize));
+  shuffleBtn.textContent = state.randomize ? "Randomizer: On" : "Randomizer: Off";
 };
 
 const updateCompletion = () => {
@@ -185,6 +199,7 @@ const setCardData = () => {
     showCompletion();
     updateProgress();
     updateUndoButton();
+    updateRandomizeButton();
     saveState();
     return;
   }
@@ -211,6 +226,7 @@ const setCardData = () => {
 
   updateProgress();
   updateUndoButton();
+  updateRandomizeButton();
   saveState();
 };
 
@@ -348,18 +364,24 @@ const handleUndo = () => {
 };
 
 const handleShuffle = () => {
-  if (state.index >= state.deck.length) {
-    return;
+  state.randomize = !state.randomize;
+  if (state.randomize && state.index < state.deck.length) {
+    const prefix = state.deck.slice(0, state.index + 1);
+    const remaining = state.deck.slice(state.index + 1);
+    shuffleArray(remaining);
+    state.deck = [...prefix, ...remaining];
   }
-  const prefix = state.deck.slice(0, state.index + 1);
-  const remaining = state.deck.slice(state.index + 1);
-  shuffleArray(remaining);
-  state.deck = [...prefix, ...remaining];
+  updateRandomizeButton();
+  saveState({ randomize: state.randomize });
   setCardData();
 };
 
 const startRound = (deckIds) => {
-  state.deck = buildDeck(deckIds);
+  const nextDeck = buildDeck(deckIds);
+  if (state.randomize) {
+    shuffleArray(nextDeck);
+  }
+  state.deck = nextDeck;
   state.index = 0;
   state.left = 0;
   state.right = 0;
@@ -431,6 +453,7 @@ const storedViewMode = storedSettings ? storedSettings.viewMode : null;
 const storedTheme = storedSettings ? storedSettings.theme : null;
 
 applyTheme(storedTheme || getPreferredTheme());
+updateRandomizeButton();
 
 if (storedViewMode) {
   const storedRadio = document.querySelector(`input[name="viewMode"][value="${storedViewMode}"]`);

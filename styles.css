@@ -358,6 +358,13 @@ body::before {
   border-style: dashed;
 }
 
+.randomize-toggle.is-active {
+  border-color: transparent;
+  background: linear-gradient(120deg, rgba(31, 90, 78, 0.25), rgba(195, 90, 45, 0.25));
+  color: var(--ink);
+  box-shadow: 0 10px 24px var(--shadow-soft);
+}
+
 .theme-toggle {
   min-width: 120px;
 }
