@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>History Swipe Deck</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand__title">History Swipe Deck</span>
+          <span class="brand__subtitle">Swipe to learn Lithuanian figures</span>
+        </div>
+        <div class="progress">
+          <div class="progress__stats">
+            <span id="progressText">0 / 0</span>
+            <span id="rightCount">Known: 0</span>
+            <span id="leftCount">Review: 0</span>
+          </div>
+          <div class="progress__bar">
+            <div id="progressFill"></div>
+          </div>
+        </div>
+      </header>
+
+      <main class="deck">
+        <div class="card-wrap" id="cardWrap">
+          <div class="card" id="card" aria-live="polite">
+            <div class="card__inner">
+              <div class="card__face card__face--front">
+                <div class="card__image">
+                  <img id="figureImage" src="" alt="">
+                </div>
+                <div class="card__content">
+                  <p id="figureDescription"></p>
+                </div>
+                <div class="card__indicator card__indicator--left">Review</div>
+                <div class="card__indicator card__indicator--right">Know</div>
+              </div>
+              <div class="card__face card__face--back">
+                <div class="card__name" id="figureName"></div>
+                <div class="card__hint">Tap or press Space to flip back</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="completion" id="completion" hidden>
+          <h2>All done</h2>
+          <p id="completionStats"></p>
+          <button id="restartBtn" class="button button--primary">Restart</button>
+        </div>
+      </main>
+
+      <section class="actions">
+        <button class="button" id="leftBtn">Swipe Left (Review)</button>
+        <button class="button button--primary" id="flipBtn">Flip</button>
+        <button class="button" id="rightBtn">Swipe Right (Know)</button>
+        <button class="button button--ghost" id="resetBtn">Reset</button>
+      </section>
+
+      <footer class="footer">
+        <span>Swipe or use arrow keys. Space flips the card.</span>
+      </footer>
+    </div>
+
+    <script src="data/figures.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
