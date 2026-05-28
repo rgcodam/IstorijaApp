@@ -13,15 +13,20 @@
           <span class="brand__title">History Swipe Deck</span>
           <span class="brand__subtitle">Swipe to learn Lithuanian figures</span>
         </div>
-        <div class="progress">
-          <div class="progress__stats">
-            <span id="progressText">0 / 0</span>
-            <span id="rightCount">Known: 0</span>
-            <span id="leftCount">Review: 0</span>
+        <div class="topbar__controls">
+          <div class="progress">
+            <div class="progress__stats">
+              <span id="progressText">0 / 0</span>
+              <span id="rightCount">Known: 0</span>
+              <span id="leftCount">Review: 0</span>
+            </div>
+            <div class="progress__bar">
+              <div id="progressFill"></div>
+            </div>
           </div>
-          <div class="progress__bar">
-            <div id="progressFill"></div>
-          </div>
+          <button class="button button--ghost theme-toggle" id="themeToggle" type="button" aria-pressed="false">
+            Dark mode
+          </button>
         </div>
       </header>
 
@@ -63,6 +68,7 @@
         <button class="button button--primary" id="flipBtn">Flip</button>
         <button class="button" id="rightBtn">Swipe Right (Know)</button>
         <button class="button button--ghost" id="undoBtn" disabled>Undo</button>
+        <button class="button" id="shuffleBtn">Randomize</button>
         <button class="button button--ghost" id="resetBtn">Reset</button>
       </section>
 

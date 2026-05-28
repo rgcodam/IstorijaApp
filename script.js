@@ -14,11 +14,13 @@ const completionStats = document.getElementById("completionStats");
 const completionHint = document.getElementById("completionHint");
 const continueBtn = document.getElementById("continueBtn");
 const viewRadios = document.querySelectorAll("input[name=\"viewMode\"]");
+const themeToggle = document.getElementById("themeToggle");
 
 const leftBtn = document.getElementById("leftBtn");
 const rightBtn = document.getElementById("rightBtn");
 const flipBtn = document.getElementById("flipBtn");
 const undoBtn = document.getElementById("undoBtn");
+const shuffleBtn = document.getElementById("shuffleBtn");
 const resetBtn = document.getElementById("resetBtn");
 const restartBtn = document.getElementById("restartBtn");
 
@@ -47,6 +49,14 @@ const buildHistory = (items) => {
     .map((entry) => ({ cardId: entry.cardId, direction: entry.direction }));
 };
 
+const shuffleArray = (items) => {
+  for (let i = items.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
+  }
+  return items;
+};
+
 const createInitialState = () => ({
   deck: figures.map((_, index) => index),
   index: 0,
@@ -68,6 +78,22 @@ const applyViewMode = (mode) => {
   card.dataset.view = mode;
 };
 
+const getPreferredTheme = () => {
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return "dark";
+  }
+  return "light";
+};
+
+const applyTheme = (theme) => {
+  const nextTheme = theme === "dark" ? "dark" : "light";
+  document.body.dataset.theme = nextTheme;
+  if (themeToggle) {
+    themeToggle.setAttribute("aria-pressed", nextTheme === "dark");
+    themeToggle.textContent = nextTheme === "dark" ? "Light mode" : "Dark mode";
+  }
+};
+
 const saveState = (override = {}) => {
   const payload = {
     deck: state.deck,
@@ -77,6 +103,7 @@ const saveState = (override = {}) => {
     unknown: state.unknown,
     history: state.history,
     viewMode: override.viewMode || card.dataset.view || "both",
+    theme: override.theme || document.body.dataset.theme || "light",
   };
   localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
 };
@@ -98,7 +125,10 @@ const loadState = () => {
     state.right = Number.isFinite(stored.right) ? stored.right : 0;
     state.unknown = buildDeck(stored.unknown);
     state.history = buildHistory(stored.history);
-    return stored.viewMode || null;
+    return {
+      viewMode: stored.viewMode || null,
+      theme: stored.theme || null,
+    };
   } catch (error) {
     return null;
   }
@@ -317,6 +347,17 @@ const handleUndo = () => {
   setCardData();
 };
 
+const handleShuffle = () => {
+  if (state.index >= state.deck.length) {
+    return;
+  }
+  const prefix = state.deck.slice(0, state.index + 1);
+  const remaining = state.deck.slice(state.index + 1);
+  shuffleArray(remaining);
+  state.deck = [...prefix, ...remaining];
+  setCardData();
+};
+
 const startRound = (deckIds) => {
   state.deck = buildDeck(deckIds);
   state.index = 0;
@@ -344,9 +385,17 @@ leftBtn.addEventListener("click", () => animateSwipe("left"));
 rightBtn.addEventListener("click", () => animateSwipe("right"));
 flipBtn.addEventListener("click", handleFlip);
 undoBtn.addEventListener("click", handleUndo);
+shuffleBtn.addEventListener("click", handleShuffle);
 resetBtn.addEventListener("click", handleReset);
 restartBtn.addEventListener("click", handleReset);
 continueBtn.addEventListener("click", handleContinueUnknown);
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = document.body.dataset.theme === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
+    saveState({ theme: nextTheme });
+  });
+}
 
 viewRadios.forEach((radio) => {
   radio.addEventListener("change", (event) => {
@@ -370,12 +419,19 @@ window.addEventListener("keydown", (event) => {
     handleFlip();
   } else if (event.key.toLowerCase() === "u") {
     handleUndo();
+  } else if (event.key.toLowerCase() === "s") {
+    handleShuffle();
   } else if (event.key.toLowerCase() === "r") {
     handleReset();
   }
 });
 
-const storedViewMode = loadState();
+const storedSettings = loadState();
+const storedViewMode = storedSettings ? storedSettings.viewMode : null;
+const storedTheme = storedSettings ? storedSettings.theme : null;
+
+applyTheme(storedTheme || getPreferredTheme());
+
 if (storedViewMode) {
   const storedRadio = document.querySelector(`input[name="viewMode"][value="${storedViewMode}"]`);
   if (storedRadio) {
