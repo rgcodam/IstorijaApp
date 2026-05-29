@@ -1,0 +1,2288 @@
+window.HISTORY_DECKS = [
+  {
+    "id": "1-istorikas-istorija-ir-istorinė-kultūra-people",
+    "title": "1. Istorikas, istorija ir istorinė kultūra — People",
+    "group": "Istorija III gimnazijos klasė",
+    "cards": [
+      {
+        "front": "Titas Livijus",
+        "back": "Romėnų istorikas, parašęs 'Nuo miesto įkūrimo' (Ab urbe condita). Istoriją laikė pilietinės dorybės pamoka (magistra vitae).",
+        "type": "term"
+      },
+      {
+        "front": "Petras Dusburgietis",
+        "back": "XIV a. kronikininkas, parašęs 'Chronicon Terrae Prussiae' – kroniką apie kryžiuočių ir prūsų/lietuvių santykius iš ordino perspektyvos.",
+        "type": "term"
+      },
+      {
+        "front": "Simonas Grunau",
+        "back": "XV–XVI a. kronikininkas, davęs vieną pirmųjų prūsų ir lietuvių religijos aprašymų, bet jo kronika yra fantastiška.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "1-istorikas-istorija-ir-istorinė-kultūra-concepts",
+    "title": "1. Istorikas, istorija ir istorinė kultūra — Concepts",
+    "group": "Istorija III gimnazijos klasė",
+    "cards": [
+      {
+        "front": "magistra vitae",
+        "back": "Lotyniškas posakis 'gyvenimo mokytoja', kuriuo Ciceronas apibūdino istoriją.",
+        "type": "term"
+      },
+      {
+        "front": "Istoriografija",
+        "back": "Istorijos mokslo raida: skirtingų epochų, mokyklų ir autorių požiūrių į istoriją visuma.",
+        "type": "term"
+      },
+      {
+        "front": "Kronika",
+        "back": "Viduramžių istorijos rašymo forma: metraštis, dažniausiai vedamas vienuolio, kuriame faktai surašyti chronologiškai su religiniais komentarais.",
+        "type": "term"
+      },
+      {
+        "front": "Kilmės legenda",
+        "back": "Pasakojimas apie tautos, giminės ar dinastijos kilmę, dažnai su mitologiniais elementais (pvz., Palemono legenda apie lietuvių kilmę iš Romos).",
+        "type": "term"
+      },
+      {
+        "front": "Tautos istorija",
+        "back": "Istorijos rašymo kryptis, kurioje tauta, o ne valdovai ar bažnyčia, tampa pagrindiniu istorijos subjektu.",
+        "type": "term"
+      },
+      {
+        "front": "Istorijos šaltinių tipai",
+        "back": "Rašytiniai (dokumentai, memuarai, dienoraščiai), daiktiniai (archeologiniai radiniai, ginklai, statiniai), vaizdiniai (fotografijos, piešiniai, žemėlapiai).",
+        "type": "term"
+      },
+      {
+        "front": "Euristika",
+        "back": "Pirmasis istorinio tyrimo etapas – šaltinių paieška: ką rasti, kur ieškoti, ar yra pakankamai medžiagos.",
+        "type": "term"
+      },
+      {
+        "front": "Šaltinių kritika",
+        "back": "Antrasis istorinio tyrimo etapas – tikrinimas, ar šaltinis autentiškas (išorinė kritika) ir ar jo turinys patikimas (vidinė kritika).",
+        "type": "term"
+      },
+      {
+        "front": "Interpretacija",
+        "back": "Trečiasis istorinio tyrimo etapas – šaltinių prasmės atskleidimas, faktų jungimas į prasmingą pasakojimą ir priežasčių bei pasekmių analizė.",
+        "type": "term"
+      },
+      {
+        "front": "Paleografija",
+        "back": "Senųjų raštų ir rankraščių skaitymo mokslas.",
+        "type": "term"
+      },
+      {
+        "front": "Heraldika",
+        "back": "Herbų mokslas.",
+        "type": "term"
+      },
+      {
+        "front": "Diplomatika",
+        "back": "Dokumentų autentiškumo ir formos tyrimas.",
+        "type": "term"
+      },
+      {
+        "front": "Genealogija",
+        "back": "Giminystės ryšių, dinastijų tyrimas.",
+        "type": "term"
+      },
+      {
+        "front": "Biografika",
+        "back": "Gyvenimo aprašymas, kuriame asmenybės kelias susiejamas su epochos pokyčiais.",
+        "type": "term"
+      },
+      {
+        "front": "Civilizacijų istorija",
+        "back": "Plačios kultūrų ir civilizacijų raidos palyginimas (pvz., Toynbee darbai).",
+        "type": "term"
+      },
+      {
+        "front": "Lokalinė istorija",
+        "back": "Vietos bendruomenės ar regiono istorija (pvz., vieno miesto ar kaimo tyrimas).",
+        "type": "term"
+      },
+      {
+        "front": "Kasdienybės istorija",
+        "back": "Paprastų žmonių gyvenimo būdo, buities, emocijų tyrimas (histoire des mentalités).",
+        "type": "term"
+      },
+      {
+        "front": "Nacionalinė istorija",
+        "back": "Tautos valstybingumo, kultūros ir tapatybės raidos pasakojimas.",
+        "type": "term"
+      },
+      {
+        "front": "Istorijos politika",
+        "back": "Praeities įvykių naudojimas dabarties politiniams tikslams pasiekti.",
+        "type": "term"
+      },
+      {
+        "front": "Istorinė propaganda",
+        "back": "Faktų selektyvus pateikimas, siekiant suformuoti norimą įvaizdį.",
+        "type": "term"
+      },
+      {
+        "front": "Paraistorija",
+        "back": "Pseudomoksliniai pasakojimai, prisidengiantys istorija (pvz., sąmokslo teorijos).",
+        "type": "term"
+      },
+      {
+        "front": "Įamžinimas",
+        "back": "Paminklų, švenčių, atminimo lentų kūrimas, kuris įtvirtina vieną praeities versiją.",
+        "type": "term"
+      },
+      {
+        "front": "Atminties karai",
+        "back": "Kova dėl to, kuri praeities versija bus oficialioji – vyksta tarp valstybių, visuomenės grupių ir asmenų.",
+        "type": "term"
+      },
+      {
+        "front": "LDK paveldo dalybos",
+        "back": "Šiandien Lietuvos, Baltarusijos, Ukrainos, Lenkijos ir Rusijos istorikai skirtingai interpretuoja LDK prigimtį.",
+        "type": "term"
+      },
+      {
+        "front": "Istorinė atmintis",
+        "back": "Visuomenės bendras praeities vaizdinys, perduodamas švietimu, šventėmis, memorialais.",
+        "type": "term"
+      },
+      {
+        "front": "Desovietizacija",
+        "back": "Sovietinės praeities simbolių, paminklų, vietovardžių šalinimas ir jų pakeitimas demokratiniais.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "1-istorikas-istorija-ir-istorinė-kultūra-events",
+    "title": "1. Istorikas, istorija ir istorinė kultūra — Events",
+    "group": "Istorija III gimnazijos klasė",
+    "cards": [
+      {
+        "front": "Tukididas",
+        "back": "Graikų istorikas (apie 460–399 m. pr. Kr.), parašęs 'Peloponeso karą'. Laikomas pirmuoju 'moksliniu' istoriku dėl objektyvaus priežasčių analizavimo.",
+        "type": "term"
+      },
+      {
+        "front": "Motiejus Strijkovskis",
+        "back": "1582 m. parašė pirmąją spausdintą Lietuvos istoriją lenkų kalba.",
+        "type": "term"
+      },
+      {
+        "front": "Albertas KojalavičiusVijūkas",
+        "back": "1609–1677, parašė 'Lietuvos istoriją' lotynų kalba – bandymas sistemingai aprašyti valstybės raidą.",
+        "type": "term"
+      },
+      {
+        "front": "Leopoldas fon Rankė",
+        "back": "1795–1886, vokiečių istorikas, suformulavęs profesionalios istoriografijos principą 'wie es eigentlich gewesen' (kaip tai iš tikrųjų buvo).",
+        "type": "term"
+      },
+      {
+        "front": "Joachimas Lelevelis",
+        "back": "1786–1861, lenkųlietuvių istorikas, sukūręs romantiškąją tautų istorijos paradigmą. 'Mažoji istorijos rašymo teorija' tapo lenkų istoriografijos manifestu.",
+        "type": "term"
+      },
+      {
+        "front": "Simonas Daukantas",
+        "back": "1793–1864, pirmasis rašė Lietuvos istoriją iš lietuvių tautos perspektyvos. 'Būdas senovės lietuvių' (1845), 'Pasakojimas apie veikalus lietuvių tautoje' (1850).",
+        "type": "term"
+      },
+      {
+        "front": "Fernanas Brodelis",
+        "back": "1902–1985, prancūzų istorikas, pasiūlęs trijų laiko sluoksnių modelį: geografinis, socialinis ir individualus laikas.",
+        "type": "term"
+      },
+      {
+        "front": "Edvardas Gudavičius",
+        "back": "1931–2020, lietuvių istorikas, sukūręs savitą Lietuvos istorijos periodizaciją, kritiškai peržiūrėjęs daugelį tradicinių tezių.",
+        "type": "term"
+      },
+      {
+        "front": "Adolfas Šapoka",
+        "back": "1906–1961, 'Lietuvos istorijos' vadovėlio autorius – lietuvių nacionalinės istorijos kanono kūrėjas.",
+        "type": "term"
+      },
+      {
+        "front": "Dezinformacija istorijos kontekste",
+        "back": "Sąmoningas melagingų faktų skleidimas apie praeitį (pvz., sovietmečiu teigta, kad 1940 m. lietuviai patys prašė prisijungti prie SSRS).",
+        "type": "term"
+      },
+      {
+        "front": "Jernas Riusenas (Jörn Rüsen)",
+        "back": "Vokiečių istorikas (g. 1938), tyrinėjantis istorinę atmintį – kaip visuomenės konstruoja praeities vaizdinius ir kodėl tai svarbu tapatumui.",
+        "type": "term"
+      },
+      {
+        "front": "Liepos 6-oji (Valstybės diena)",
+        "back": "Mindaugo karūnavimo diena (1253 m.), 1990 m. atkūrus nepriklausomybę tapo valstybingumo simboliu, prieštaraujančiu sovietiniam naratyvui.",
+        "type": "term"
+      },
+      {
+        "front": "Jonas ŽemaitisVytautas",
+        "back": "2018 m. pripažintas Lietuvos valstybės vadovu – partizaninio pasipriešinimo legitimumo įtvirtinimas.",
+        "type": "term"
+      },
+      {
+        "front": "Vytauto Didžiojo 500 metų jubiliejus (1930)",
+        "back": "Tapo nacionalinio pasididžiavimo simboliu tarpukario Lietuvoje, kuriant imperinės praeities naratyvą.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "1-istorikas-istorija-ir-istorinė-kultūra-misc",
+    "title": "1. Istorikas, istorija ir istorinė kultūra — Misc",
+    "group": "Istorija III gimnazijos klasė",
+    "cards": [
+      {
+        "front": "Lietuvos valstybinės šventės ir atmintinos datos",
+        "back": "Vasario 16-oji, Kovo 11-oji, Liepos 6-oji, Laisvės gynėjų diena (Sausio 13-oji).",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "2-valstybingumas-suverenitetas-idėjos-formos-people",
+    "title": "2. Valstybingumas: suverenitetas, idėjos, formos — People",
+    "group": "Istorija III gimnazijos klasė",
+    "cards": [
+      {
+        "front": "Oktavianas Augustas",
+        "back": "63 m. pr. Kr.–14 m., įvedęs principatą – slaptąją monarchiją po respublikos fasadu.",
+        "type": "term"
+      },
+      {
+        "front": "Ponų Taryba",
+        "back": "LDK bajorų taryba prie valdovo, pirmtakas seimų.",
+        "type": "term"
+      },
+      {
+        "front": "Lietuvos Vyriausiasis Tribunalas",
+        "back": "Aukščiausiasis teismas Lietuvoje ATR laikotarpiu.",
+        "type": "term"
+      },
+      {
+        "front": "Vytautas Landsbergis",
+        "back": "Sąjūdžio lyderis, pirmasis AT pirmininkas po nepriklausomybės atkūrimo.",
+        "type": "term"
+      },
+      {
+        "front": "Algirdas Mykolas Brazauskas",
+        "back": "Paskutinysis KP CK pirmasis sekretorius, tapęs pirmuoju demokratiškai išrinktu prezidentu.",
+        "type": "term"
+      },
+      {
+        "front": "Valdas Adamkus",
+        "back": "Prezidentas, grįžęs iš JAV diasporos, išrinktas dvi kadencijas.",
+        "type": "term"
+      },
+      {
+        "front": "Gabrielė PetkevičaitėBitė",
+        "back": "Rašytoja, lietuvių tautos švietėja, dalyvavusi Vilniaus konferencijoje.",
+        "type": "term"
+      },
+      {
+        "front": "Kazys Grinius",
+        "back": "Tarpukario Lietuvos prezidentas.",
+        "type": "term"
+      },
+      {
+        "front": "Aleksandras Stulginskis",
+        "back": "Tarpukario Lietuvos prezidentas.",
+        "type": "term"
+      },
+      {
+        "front": "Mykolas Sleževičius",
+        "back": "Tarpukario Lietuvos premjeras.",
+        "type": "term"
+      },
+      {
+        "front": "Felicija Bortkevičienė",
+        "back": "Viena pirmųjų moterų politikų Lietuvoje.",
+        "type": "term"
+      },
+      {
+        "front": "Steponas Kairys",
+        "back": "Tarpukario politikas, vėliau emigracijoje.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "2-valstybingumas-suverenitetas-idėjos-formos-concepts",
+    "title": "2. Valstybingumas: suverenitetas, idėjos, formos — Concepts",
+    "group": "Istorija III gimnazijos klasė",
+    "cards": [
+      {
+        "front": "Despotija",
+        "back": "Valdymo forma, kai valdžia absoliuti, dažnai grindžiama religiniu pagrindu (pvz., Egipto faraonas, Persijos imperija).",
+        "type": "term"
+      },
+      {
+        "front": "Faraonas",
+        "back": "Senovės Egipto valdovas, laikomas dievo žemiškuoju atstovu.",
+        "type": "term"
+      },
+      {
+        "front": "Viziris",
+        "back": "Rytų monarchijos vyriausiasis ministras, pavaldus tik valdovui.",
+        "type": "term"
+      },
+      {
+        "front": "Satrapas",
+        "back": "Persijos provincijos valdytojas, skiriamas karaliaus.",
+        "type": "term"
+      },
+      {
+        "front": "Atėnų demokratija",
+        "back": "V a. pr. Kr. tiesioginė demokratija: piliečiai rinkdavosi į agorą ir balsuodavo rankų pakėlimu. Taikytina tik laisviems vyrams.",
+        "type": "term"
+      },
+      {
+        "front": "Polis",
+        "back": "Graikų miestasvalstybė, pilietinės bendruomenės centras.",
+        "type": "term"
+      },
+      {
+        "front": "Roma: mišrioji konstitucija",
+        "back": "Respublikoje valdžia padalyta tarp senato (aristokratija), konsulų (du kasmet renkami vadovai) ir plebėjų tribūnų.",
+        "type": "term"
+      },
+      {
+        "front": "Patricijai",
+        "back": "Romos kilmingieji piliečiai.",
+        "type": "term"
+      },
+      {
+        "front": "Plebėjai",
+        "back": "Romos eiliniai piliečiai.",
+        "type": "term"
+      },
+      {
+        "front": "Principatas",
+        "back": "Romos valdymo forma, kai respublikos institucijos išlieka fasadu, bet reali valdžia sutelkta vienam asmeniui (principui).",
+        "type": "term"
+      },
+      {
+        "front": "Dominatas",
+        "back": "Atviras absoliutizmas Romos imperijoje, kai imperatorius pripažįstamas dievišku autoritetu.",
+        "type": "term"
+      },
+      {
+        "front": "Provincija",
+        "back": "Romos imperijos valdoma užsienio teritorija.",
+        "type": "term"
+      },
+      {
+        "front": "Senatas",
+        "back": "Romos aristokratijos taryba, turėjusi didelę politinę galią respublikoje.",
+        "type": "term"
+      },
+      {
+        "front": "Konsulas",
+        "back": "Du kasmet renkami Romos respublikos vadovai.",
+        "type": "term"
+      },
+      {
+        "front": "Feodas / vasalitetas",
+        "back": "Žemių ir ištikimybės mainų sistema tarp valdovo ir jo pavaldinių viduramžių Europoje.",
+        "type": "term"
+      },
+      {
+        "front": "Domenas",
+        "back": "Valdovo asmeninės žemės feodalinėje sistemoje.",
+        "type": "term"
+      },
+      {
+        "front": "Generaliniai luomai",
+        "back": "Prancūzijos luomų atstovų susirinkimas (dvasininkai, kilmingieji, trečiasis luomas).",
+        "type": "term"
+      },
+      {
+        "front": "Absoliutizmas",
+        "back": "Valdymo forma, kai valdovas turi absoliučią valdžią, grindžiamą Dievo paskyrimo ideja (divine right).",
+        "type": "term"
+      },
+      {
+        "front": "Primogenitūra",
+        "back": "Paveldėjimo principas, kai valdžią paveldi pirmagalis.",
+        "type": "term"
+      },
+      {
+        "front": "Konstitucinė monarchija",
+        "back": "Valdymo forma, kai monarchas lieka valstybės simboliu, bet reali valdžia priklauso parlamentui.",
+        "type": "term"
+      },
+      {
+        "front": "Imperija",
+        "back": "Valstybė, valdanti didelę teritoriją su įvairiomis tautomis, dažnai per karines užkariavimus.",
+        "type": "term"
+      },
+      {
+        "front": "Dinastija",
+        "back": "Valdovų giminė, perduodanti valdžią (dažniausiai primogenitūros principu).",
+        "type": "term"
+      },
+      {
+        "front": "Parlamentas",
+        "back": "Atstovaujamoji institucija, kurią sušaukdavo valdovas konsultacijoms ar mokesčių tvirtinimui.",
+        "type": "term"
+      },
+      {
+        "front": "Napoleono kodeksas",
+        "back": "Pirmasis civilinis kodeksas, tapęs modernios teisės pagrindu daugelyje Europos valstybių.",
+        "type": "term"
+      },
+      {
+        "front": "Konstitucija",
+        "back": "Pagrindinis valstybės įstatymas, apibrėžiantis valdžios struktūrą ir piliečių teises.",
+        "type": "term"
+      },
+      {
+        "front": "Nacionalinė valstybė",
+        "back": "Valstybė, kurios legitimumas grindžiamas tautos suverenitetu (tauta – politinis subjektas).",
+        "type": "term"
+      },
+      {
+        "front": "Nacionalizmas",
+        "back": "Tautos interesų ir tapatybės puoselėjimas.",
+        "type": "term"
+      },
+      {
+        "front": "Šovinizmas",
+        "back": "Ekstremalus, agresyvus nacionalizmas.",
+        "type": "term"
+      },
+      {
+        "front": "Respublika",
+        "back": "Valdymo forma, kurioje valdžia priklauso tautai, o ne paveldima.",
+        "type": "term"
+      },
+      {
+        "front": "Restauracija",
+        "back": "Buvusios valdymo formos atkūrimas po revoliucijos.",
+        "type": "term"
+      },
+      {
+        "front": "Rojalistai",
+        "back": "Monarchijos šalininkai.",
+        "type": "term"
+      },
+      {
+        "front": "Romantizmas",
+        "back": "Kultūrinis judėjimas, tautos ir istorijos idealizavimas, paskatinęs nacionalizmą.",
+        "type": "term"
+      },
+      {
+        "front": "Valdžių atskyrimo principas",
+        "back": "Įstatymų leidžiamoji, vykdomoji ir teismų valdžios turi būti atskirtos.",
+        "type": "term"
+      },
+      {
+        "front": "Parlamentarizmas",
+        "back": "Valdymo sistema, kai reali valdžia priklauso atstovaujamajam parlamentui.",
+        "type": "term"
+      },
+      {
+        "front": "Autoritarizmas",
+        "back": "Valdymas, kai valdžia sutelkta vienam asmeniui/grupei, bet visuomenėje leidžiama tam tikra privati veikla.",
+        "type": "term"
+      },
+      {
+        "front": "Totalitarizmas",
+        "back": "Valdymo forma, kai valstybė siekia kontroliuoti ne tik politiką, bet ir privatų gyvenimą, mintis, kultūrą. Bruožai: vienpartinė sistema, ideologija, propaganda, teroras.",
+        "type": "term"
+      },
+      {
+        "front": "Fašizmas",
+        "back": "Itališkas totalitarinis judėjimas, kurio ideologija – valstybė virš individo, imperializmas.",
+        "type": "term"
+      },
+      {
+        "front": "Nacionalsocializmas",
+        "back": "Vokiškas totalitarinis judėjimas, grindžiamas rasizmu, antisemitizmu, Lebensraum idėja.",
+        "type": "term"
+      },
+      {
+        "front": "Holokaustas",
+        "back": "Sisteminis 6 milijonų žydų naikinimas nacių Vokietijoje per Antrąjį pasaulinį karą.",
+        "type": "term"
+      },
+      {
+        "front": "GULAG",
+        "back": "Sovietų Sąjungos lagerių sistema, naudota politiniams kaliniams.",
+        "type": "term"
+      },
+      {
+        "front": "Propaganda",
+        "back": "Idėjų skleidimas, siekiant paveikti žmonių požiūrius ir elgesį.",
+        "type": "term"
+      },
+      {
+        "front": "Teroras",
+        "back": "Valstybinė prievarta prieš civilius populiaciją, siekiant įbauginti.",
+        "type": "term"
+      },
+      {
+        "front": "Genocidas",
+        "back": "Tautos, etninės, rasinės ar religinės grupės visiškas ar dalinis sunaikinimas.",
+        "type": "term"
+      },
+      {
+        "front": "Liberalioji demokratija",
+        "back": "Valdymo forma, grindžiama rinkimais, pilietinėmis laisvėmis ir valdžių atskyrimu.",
+        "type": "term"
+      },
+      {
+        "front": "Karinė diktatūra",
+        "back": "Valdymas, kai valdžią perima kariuomenė.",
+        "type": "term"
+      },
+      {
+        "front": "Cenzūra",
+        "back": "Valstybinė informacijos kontrolė ir apribojimas.",
+        "type": "term"
+      },
+      {
+        "front": "Koncentracijos stovykla",
+        "back": "Vietoje, kur žmonės laikomi prieš savo valią, dažnai be teismo (pvz., nacių ar sovietų stovyklos).",
+        "type": "term"
+      },
+      {
+        "front": "Pasaulio tautų teisuoliai",
+        "back": "Žmonės, kurie gelbėjo žydus Holokausto metu, rizikuodami savo gyvybe.",
+        "type": "term"
+      },
+      {
+        "front": "Satyagraha",
+        "back": "Gandžio filosofija – 'tiesos laikymasis' per neginkluotą pasipriešinimą.",
+        "type": "term"
+      },
+      {
+        "front": "Dekolonizacija",
+        "back": "Kolonijų atsikratymas ir nepriklausomų valstybių kūrimasis po Antrojo pasaulinio karo.",
+        "type": "term"
+      },
+      {
+        "front": "Autochtonai",
+        "back": "Vietiniai kolonijų gyventojai.",
+        "type": "term"
+      },
+      {
+        "front": "Neokolonializmas",
+        "back": "Buvusių kolonijų ekonominė priklausomybė nuo metropolijų net ir po politinės nepriklausomybės.",
+        "type": "term"
+      },
+      {
+        "front": "Protektoratas",
+        "back": "Priklausomybės nuo metropolijos forma su silpnesne kontrole.",
+        "type": "term"
+      },
+      {
+        "front": "Dominija",
+        "back": "Valstybė su savivalda, bet palaikanti ryšius su metropolija (pvz., Britų Sandraugos narė).",
+        "type": "term"
+      },
+      {
+        "front": "Referendumas",
+        "back": "Tiesioginis tautos balsavimas dėl svarbaus klausimo.",
+        "type": "term"
+      },
+      {
+        "front": "Besivystančios valstybės",
+        "back": "Naujai nepriklausomos valstybės, siekiančios ekonominės plėtros.",
+        "type": "term"
+      },
+      {
+        "front": "Suverenitetas",
+        "back": "Valstybės aukščiausioji valdžia savo teritorijoje.",
+        "type": "term"
+      },
+      {
+        "front": "Gedimino laiškai",
+        "back": "XIV a. laiškai popiežiui ir Vakarų valdovams – diplomatija, kuria siekta geresnių santykių su Europa.",
+        "type": "term"
+      },
+      {
+        "front": "Personalinė (dinastinė) unija",
+        "back": "Dviejų valstybių sąjunga, kai tą patį valdovą turi abi valstybės, bet institucijos lieka atskiros.",
+        "type": "term"
+      },
+      {
+        "front": "Kancleris",
+        "back": "Valdovo kanceliarijos vadovas, atsakingas už dokumentus ir diplomatiją.",
+        "type": "term"
+      },
+      {
+        "front": "Vaivada",
+        "back": "Aukščiausias karinės administracijos pareigūnas LDK provincijoje.",
+        "type": "term"
+      },
+      {
+        "front": "Tėvonija",
+        "back": "Bajoro valdoma žemė su valstiečiais – feodas LDK kontekste.",
+        "type": "term"
+      },
+      {
+        "front": "Ankstyvoji monarchija",
+        "back": "Valdymas, pagrįstas valdovo asmenine galia, dar nesusiformavus luomų institucijoms.",
+        "type": "term"
+      },
+      {
+        "front": "Realinė unija",
+        "back": "Valstybių sąjunga su bendromis institucijomis (skirtingai nuo personalinės unijos).",
+        "type": "term"
+      },
+      {
+        "front": "LDK savarankiškumo požymiai ATR",
+        "back": "Atskira teisė (Lietuvos Statutai), kariuomenė, iždas, Lietuvos Vyriausiasis Tribunalas.",
+        "type": "term"
+      },
+      {
+        "front": "'Libertum veto'",
+        "back": "Teisė, leidusi vienam seimo deputatui vetuoti bet kokį sprendimą ('nesutinku'). Ilgainiui paralyžiavo valstybę.",
+        "type": "term"
+      },
+      {
+        "front": "Targovicos konfederacija",
+        "back": "Bajorų sąjunga, su Rusijos pagalba panaikinusi Gegužės 3-iosios konstituciją.",
+        "type": "term"
+      },
+      {
+        "front": "Koekvacija",
+        "back": "Bajoro teisė balsuoti seime vietoj kito (parduoti/perduoti savo balsą).",
+        "type": "term"
+      },
+      {
+        "front": "Konfederacija",
+        "back": "Bajorų sąjunga, kurios nariai vieningai priima sprendimus.",
+        "type": "term"
+      },
+      {
+        "front": "'Pacta conventa'",
+        "back": "Valdovo rinkimų sutartis su bajorais, kurioje jis įsipareigoja ginti bajorų teises.",
+        "type": "term"
+      },
+      {
+        "front": "Pavieto seimelis",
+        "back": "Vietinė bajorų asamblėja ATR.",
+        "type": "term"
+      },
+      {
+        "front": "Seimas / Senatas",
+        "back": "ATR įstatymų leidžiamasis organas: seimas – bajorų; senatas – aukštesnių pareigūnų.",
+        "type": "term"
+      },
+      {
+        "front": "Rusifikacija",
+        "back": "Carinės valdžios politika slopinti vietines kalbas ir kultūras.",
+        "type": "term"
+      },
+      {
+        "front": "Autonomija",
+        "back": "Dalinė savivalda platesnės valstybės ribose.",
+        "type": "term"
+      },
+      {
+        "front": "Partija (politinė)",
+        "back": "Politinė organizacija, siekianti valdžios per rinkimus ar revoliuciją.",
+        "type": "term"
+      },
+      {
+        "front": "Nacionalinė valstybė (lietuvių atveju)",
+        "back": "Valstybė, grindžiama lietuvių tautos suverenitetu.",
+        "type": "term"
+      },
+      {
+        "front": "Tautų apsisprendimo teisė",
+        "back": "Principas, kad tauta turi teisę pati spręsti savo politinį likimą.",
+        "type": "term"
+      },
+      {
+        "front": "'Voldemarininkai'",
+        "back": "A. Voldemaro šalininkai – radikali dešinioji grupė tarpukario Lietuvoje.",
+        "type": "term"
+      },
+      {
+        "front": "Klerikalizmas",
+        "back": "Bažnyčios įtaka politikai.",
+        "type": "term"
+      },
+      {
+        "front": "Pusiau prezidentinė respublika",
+        "back": "Prezidentas renkamas tiesiogiai, turi plačius įgaliojimus užsienio politikoje, bet vyriausybę formuoja Seimas.",
+        "type": "term"
+      },
+      {
+        "front": "Euroatlantinė integracija",
+        "back": "Procesas, kuriuo Lietuva siekė narystės NATO ir ES.",
+        "type": "term"
+      },
+      {
+        "front": "Eurointegracija",
+        "back": "Ekonominis ir politinis procesas, kurio metu Lietuva priėmė ES teisės aktus ir prisijungė prie bendros rinkos.",
+        "type": "term"
+      },
+      {
+        "front": "Karinė padėtis",
+        "back": "Ypatingoji padėtis, kai kariuomenė perima vidaus valdymą.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "2-valstybingumas-suverenitetas-idėjos-formos-events",
+    "title": "2. Valstybingumas: suverenitetas, idėjos, formos — Events",
+    "group": "Istorija III gimnazijos klasė",
+    "cards": [
+      {
+        "front": "Nabuchodonosaras II",
+        "back": "Naujosios Babilonijos karalius (apie 630–562 m. pr. Kr.), pastatęs Ištaros vartus ir kabančiuosius sodus.",
+        "type": "term"
+      },
+      {
+        "front": "Darijus I",
+        "back": "Persijos imperijos valdovas (522–486 m. pr. Kr.), įtvirtinęs satrapo sistemą: imperija suskirstyta į 20 sričių su karaliaus paskirtais vietininkais.",
+        "type": "term"
+      },
+      {
+        "front": "Solonas",
+        "back": "Atėnų įstatymų leidėjas (apie 638–558 m. pr. Kr.), panaikinęs skolas (seisachtheia) ir suteikęs pagrindines teises.",
+        "type": "term"
+      },
+      {
+        "front": "Periklis",
+        "back": "Atėnų politikas (apie 495–429 m. pr. Kr.), išplėtęs demokratinę sistemą.",
+        "type": "term"
+      },
+      {
+        "front": "Dioklecianas",
+        "back": "284–305 m., įvedęs dominatą – atvirą absoliutinį valdymą, kai imperatorius tapo dievišku autoritetu.",
+        "type": "term"
+      },
+      {
+        "front": "Otonas I",
+        "back": "912–973, pirmasis Šventosios Romos imperijos imperatorius (nuo 962 m.).",
+        "type": "term"
+      },
+      {
+        "front": "Karolis Didysis",
+        "back": "742–814, karūnuotas imperatoriumi 800 m. – Vakarų imperijos atgimimo simbolis.",
+        "type": "term"
+      },
+      {
+        "front": "Magna Carta (Didžioji laisvių chartija)",
+        "back": "1215 m. Anglijoje priimta chartija, įtvirtinusi, kad valdovas turi laikytis įstatymų ir garantavusi barams teises.",
+        "type": "term"
+      },
+      {
+        "front": "Pilypas IV Gražusis",
+        "back": "1268–1314, 1302 m. sušaukė pirmuosius Prancūzijos generalinius luomus.",
+        "type": "term"
+      },
+      {
+        "front": "Liudvikas XIV",
+        "back": "1643–1715, Prancūzijos absoliutizmo simbolis. 'Valstybė – tai aš' (L'État, c'est moi). Centralizavo valdžią, kariuomenę, mokesčius.",
+        "type": "term"
+      },
+      {
+        "front": "Teisių bilis (Bill of Rights, 1689 m.)",
+        "back": "Anglijos dokumentas, įtvirtinęs konstitucinę monarchiją – karalius negali skelbti įstatymų be parlamento.",
+        "type": "term"
+      },
+      {
+        "front": "Vilhelmas Oraniečius",
+        "back": "1650–1702, 1688 m. 'Glorioziosios revoliucijos' metu tapo Anglijos karaliumi, įtvirtino konstitucinę monarchiją.",
+        "type": "term"
+      },
+      {
+        "front": "Prancūzijos Didžioji revoliucija",
+        "back": "1789–1799 m., sugriovė absoliutinę monarchiją, įtvirtino tautos suverenitetą, lygybę prieš įstatymą.",
+        "type": "term"
+      },
+      {
+        "front": "Liudvikas XVI",
+        "back": "Prancūzijos karalius, nužudytas 1793 m. revoliucijos metu.",
+        "type": "term"
+      },
+      {
+        "front": "Maksimiljenas Robespjeras",
+        "back": "1758–1794, jakobinų lyderis, vedęs Teroro politiką Prancūzijos revoliucijos metu.",
+        "type": "term"
+      },
+      {
+        "front": "Jakobinai",
+        "back": "Radikali Prancūzijos revoliucijos frakcija, kuri 1793–1794 m. vykdė Terorą.",
+        "type": "term"
+      },
+      {
+        "front": "Direktorija",
+        "back": "1795–1799 m. Prancūzijos vyriausybė, bandžiusi stabilizuoti respubliką po Teroro.",
+        "type": "term"
+      },
+      {
+        "front": "Napoleonas Bonapartas",
+        "back": "1769–1821, 1799 m. įvykdė perversmą, tapo imperatoriumi. Sukūrė Napoleono kodeksą – pirmąjį civilinį kodeksą Europoje.",
+        "type": "term"
+      },
+      {
+        "front": "Tautų pavasaris",
+        "back": "1848–1849 m. revoliucijos Europoje, reikalavusios nacionalinių valstybių ir konstitucinių reformų.",
+        "type": "term"
+      },
+      {
+        "front": "Oto fon Bismarkas",
+        "back": "1815–1898, Prūsijos kancleris, suvienijęs Vokietiją 1870–1871 m. per 'geležį ir kraują'.",
+        "type": "term"
+      },
+      {
+        "front": "Džiuzepė Garibaldis",
+        "back": "1807–1882, Italijos suvienijimo veikėjas, 'Raudonmaršių' vadas.",
+        "type": "term"
+      },
+      {
+        "front": "Vokietijos suvienijimas",
+        "back": "1870–1871 m. Prūsijai suvienijus vokiškai kalbančias žemes.",
+        "type": "term"
+      },
+      {
+        "front": "Italijos suvienijimas",
+        "back": "XIX a. viduryje–1871 m. vieningos Italijos karalystės sukūrimas.",
+        "type": "term"
+      },
+      {
+        "front": "Karalienė Viktorija",
+        "back": "1837–1901, simbolizavo Viktorijos epochą – pramoninę galią, kolonializmą ir konstitucinės monarchijos stabilumą.",
+        "type": "term"
+      },
+      {
+        "front": "Dualistinė valstybė",
+        "back": "Valstybė, kurią sudaro dvi lygiavertės dalys (pvz., AustrijaVengrija 1867–1918).",
+        "type": "term"
+      },
+      {
+        "front": "Tomašas Garigas Masarikas",
+        "back": "1850–1937, Čekoslovakijos prezidentas, 'demokratijos tėvas' Vidurio Europoje.",
+        "type": "term"
+      },
+      {
+        "front": "Franklinas Ruzveltas",
+        "back": "1882–1945, JAV prezidentas, įvedęs 'Naująjį kursą' (New Deal) Didžiosios depresijos metu.",
+        "type": "term"
+      },
+      {
+        "front": "Adolfas Hitleris",
+        "back": "1889–1945, Vokietijos diktatorius, pradėjęs Antrąjį pasaulinį karą ir Holokaustą.",
+        "type": "term"
+      },
+      {
+        "front": "Josifas Stalinas",
+        "back": "1878–1953, Sovietų Sąjungos diktatorius, organizavęs terorą, GULAGą, kolektyvizaciją.",
+        "type": "term"
+      },
+      {
+        "front": "Vladimiras Leninas",
+        "back": "1870–1924, vedė Spalio perversmą (1917 m.), sukūrė Tarybų valdžią.",
+        "type": "term"
+      },
+      {
+        "front": "Spalio perversmas (1917 m.)",
+        "back": "Bolševikų perversmas Rusijoje, atvedęs prie komunistinės valdžios įtvirtinimo.",
+        "type": "term"
+      },
+      {
+        "front": "Benito Musolinis",
+        "back": "1883–1945, Italijos fašistų lyderis, diktatorius nuo 1922 m.",
+        "type": "term"
+      },
+      {
+        "front": "Mao Dzedongas",
+        "back": "1893–1976, Kinijos komunistų lyderis, įkūręs Kinijos Liaudies Respubliką (1949 m.).",
+        "type": "term"
+      },
+      {
+        "front": "Juzefas Pilsudskis",
+        "back": "1867–1935, Lenkijos karininkas, 1926 m. įvykdęs perversmą ir sukūręs sanacijos režimą.",
+        "type": "term"
+      },
+      {
+        "front": "Holodomoras",
+        "back": "1932–1933 m. dirbtinis badas Ukrainoje, organizuotas Stalino režimo, nusinešęs milijonus gyvybių.",
+        "type": "term"
+      },
+      {
+        "front": "Liaudies frontas",
+        "back": "Kairės jėgų sąjunga, siekusi užkirsti kelią fašizmui (ypač Prancūzijoje 1936 m.).",
+        "type": "term"
+      },
+      {
+        "front": "Mohandas Gandis",
+        "back": "1869–1948, Indijos nepriklausomybės lyderis, naudojęs neginkluoto pasipriešinimo (satyagraha) metodą.",
+        "type": "term"
+      },
+      {
+        "front": "Indijos nepriklausomybė",
+        "back": "1947 m. – svarbiausias dekolonizacijos signalas Azijoje.",
+        "type": "term"
+      },
+      {
+        "front": "Džavaharlalis Neru",
+        "back": "1889–1964, pirmasis Indijos premjeras, siekęs laicistinės ir socialistinės Indijos.",
+        "type": "term"
+      },
+      {
+        "front": "Afrikos metai",
+        "back": "1960-ieji, kai daugybė Afrikos valstybių gavo nepriklausomybę.",
+        "type": "term"
+      },
+      {
+        "front": "Šumano planas",
+        "back": "1950 m. – idėja suvienyti Prancūzijos ir Vokietijos anglių ir plieno resursus, kad nebegalėtų kariauti.",
+        "type": "term"
+      },
+      {
+        "front": "Europos anglių ir plieno bendrija",
+        "back": "Įkurta 1951 m. – pirmasis Europos integracijos žingsnis.",
+        "type": "term"
+      },
+      {
+        "front": "EEB (Europos ekonominė bendrija)",
+        "back": "Įkurta 1957 m. Romos sutartimi – bendroji rinka Europos valstybėms.",
+        "type": "term"
+      },
+      {
+        "front": "Europos Sąjunga (ES)",
+        "back": "Sukurta 1992 m. Mastrichto sutartimi – politinė ir ekonominė Europos valstybių sąjunga.",
+        "type": "term"
+      },
+      {
+        "front": "Žanas Monė",
+        "back": "1888–1979, vienas Europos integracijos architektų.",
+        "type": "term"
+      },
+      {
+        "front": "Šarlis de Golis",
+        "back": "1890–1970, Prancūzijos prezidentas, palaikęs Europos bendradarbiavimą.",
+        "type": "term"
+      },
+      {
+        "front": "Konradas Adenaueris",
+        "back": "1876–1967, Vokietijos kancleris, siekęs suartinti Vokietiją su Vakarais ir Prancūzija.",
+        "type": "term"
+      },
+      {
+        "front": "Mindaugas",
+        "back": "Pirmasis Lietuvos karalius (karūnuotas 1253 m. liepos 6 d.), suvienijęs dalį baltų žemių.",
+        "type": "term"
+      },
+      {
+        "front": "Mindaugo krikštas",
+        "back": "1251 m. – politinis žingsnis, siekiant atskirti Livonijos ordiną nuo Danijos sąjungos.",
+        "type": "term"
+      },
+      {
+        "front": "Mindaugo karūnavimas",
+        "back": "1253 m. liepos 6 d. – Lietuvos tarptautinio pripažinimo pradžia.",
+        "type": "term"
+      },
+      {
+        "front": "Gediminas",
+        "back": "Apie 1275–1341, pradėjo LDK plėtrą į rytus ir pietus, siuntė laiškus Vakarų valdovams.",
+        "type": "term"
+      },
+      {
+        "front": "Algirdas",
+        "back": "M. 1377, tęsė LDK ekspansiją į Rusią.",
+        "type": "term"
+      },
+      {
+        "front": "Kęstutis",
+        "back": "M. 1382, rūpinosi Vakarų siena prieš kryžiuočius.",
+        "type": "term"
+      },
+      {
+        "front": "Vytautas Didysis",
+        "back": "Apie 1350–1430, vienas didžiausių Lietuvos valdovų, centralizavo valdžią, plėtė diplomatiją.",
+        "type": "term"
+      },
+      {
+        "front": "Žalgirio mūšis",
+        "back": "1410 m. – vienas didžiausių viduramžių mūšių Europoje, LDK ir Lenkija nugalėjo kryžiuočius.",
+        "type": "term"
+      },
+      {
+        "front": "Melno taika",
+        "back": "1422 m. – sutartis su kryžiuočiais, pagal kurią Žemaitija atiteko Lietuvai.",
+        "type": "term"
+      },
+      {
+        "front": "Krėvos sutartis (1385 m.)",
+        "back": "Personalinės unijos tarp Lietuvos ir Lenkijos pradžia – Jogaila vedė Jadwigą ir tapo Lenkijos karaliumi.",
+        "type": "term"
+      },
+      {
+        "front": "Jogaila",
+        "back": "Apie 1352–1434, Lietuvos didysis kunigaikštis, vėliau Lenkijos karalius Władysław II Jagiełło.",
+        "type": "term"
+      },
+      {
+        "front": "Lietuvos krikštas",
+        "back": "1387 m. – politinis ir religinis aktas, kuriuo Lietuva oficialiai tapo krikščioniška valstybe.",
+        "type": "term"
+      },
+      {
+        "front": "Kazimieras Jogailaitis",
+        "back": "1427–1492, 1447 m. suteikė barams teisę į žemę.",
+        "type": "term"
+      },
+      {
+        "front": "Aleksandras Jogailaitis",
+        "back": "1461–1506, suteikė daugiau teisių bajorams.",
+        "type": "term"
+      },
+      {
+        "front": "Žygimantas Senasis",
+        "back": "1467–1548, jo valdymo metu atsirado Ponų Taryba – pirmtakas seimų.",
+        "type": "term"
+      },
+      {
+        "front": "Liublino unija (1569 m.)",
+        "back": "Sutartis, pakeitusi personalinę uniją į realinę – sukūrė Abiejų Tautų Respubliką (ATR).",
+        "type": "term"
+      },
+      {
+        "front": "Abiejų Tautų Respublika (ATR)",
+        "back": "1569–1795 m. valstybė, sukurta Lietuvos ir Lenkijos unija.",
+        "type": "term"
+      },
+      {
+        "front": "Trečiasis Lietuvos Statutas (1588 m.)",
+        "back": "Paskutinis Lietuvos Statutas – bandymas išsaugoti Lietuvos teisinę savarankiškumą.",
+        "type": "term"
+      },
+      {
+        "front": "Mikalojus Radvila Rudasis",
+        "back": "1512–1584, Lietuvos reformacijos veikėjas, didysis kancleris, rėmęs kalvinizmą ir religijos laisvę.",
+        "type": "term"
+      },
+      {
+        "front": "Jonušas Radvila",
+        "back": "1612–1655, 1655 m. pasirašė Kėdainių uniją su Švedija – bandymas apsaugoti LDK nuo Rusijos.",
+        "type": "term"
+      },
+      {
+        "front": "Kėdainių unija (1655 m.)",
+        "back": "Sutartis su Švedija – desperatiškas bandymas išsaugoti LDK nepriklausomybę.",
+        "type": "term"
+      },
+      {
+        "front": "Stanislovas Augustas Poniatovskis",
+        "back": "1732–1798, paskutinysis ATR valdovas, bandęs reformuoti valstybę per Ketverių metų seimą.",
+        "type": "term"
+      },
+      {
+        "front": "Ketverių metų seimas",
+        "back": "1788–1792 m. seimas, bandęs reformuoti ATR.",
+        "type": "term"
+      },
+      {
+        "front": "Gegužės 3-iosios konstitucija (1791 m.)",
+        "back": "Pirmoji Europoje rašytinė konstitucija – antroji pasaulyje po JAV.",
+        "type": "term"
+      },
+      {
+        "front": "Tadas Kosciuška",
+        "back": "1746–1817, vedė 1794 m. sukilimą – paskutinį bandymą išsaugoti ATR nepriklausomybę.",
+        "type": "term"
+      },
+      {
+        "front": "ATR padalijimai",
+        "back": "1772, 1793, 1795 m. – Rusija, Prūsija ir Austrija padalino Abiejų Tautų Respubliką.",
+        "type": "term"
+      },
+      {
+        "front": "'Nihil novi'",
+        "back": "1505 m. įstatymas, draudęs valdovui priimti naujus įstatymus be seimo sutikimo.",
+        "type": "term"
+      },
+      {
+        "front": "Mykolas Kleopas Oginskis",
+        "back": "1765–1833, 1811 m. parengė memorandumą Rusijos carui dėl LDK atkūrimo su autonomija.",
+        "type": "term"
+      },
+      {
+        "front": "1830–1831 m. sukilimas",
+        "back": "Bandymas atstatyti ATR, nuslopintas caro kariuomenės.",
+        "type": "term"
+      },
+      {
+        "front": "1863–1864 m. sukilimas",
+        "back": "Vadovaujamas Zigmanto Sierakausko ir Antano Gelgaudo; jau aiškiau siekta tautinio atgimimo.",
+        "type": "term"
+      },
+      {
+        "front": "Zigmantas Sierakauskas",
+        "back": "1827–1863, 1863 m. sukilimo vadovas.",
+        "type": "term"
+      },
+      {
+        "front": "Antanas Gelgaudas",
+        "back": "1832–1863, 1863 m. sukilimo vadovas.",
+        "type": "term"
+      },
+      {
+        "front": "Jonas Basanavičius",
+        "back": "1851–1927, 'Tautos patriarchas', rinko tautosaką, leido 'Aušrą', siekė sukurti modernią lietuvių tautą.",
+        "type": "term"
+      },
+      {
+        "front": "Jonas Šliūpas",
+        "back": "1861–1944, skelbė laisvamanybę ir socialistines idėjas.",
+        "type": "term"
+      },
+      {
+        "front": "Povilas Višinskis",
+        "back": "1875–1906, inteligentas, siekęs kelti valstiečius.",
+        "type": "term"
+      },
+      {
+        "front": "Didysis Vilniaus seimas (1905 m.)",
+        "back": "Pirmoji masinė lietuvių politinė manifestacija – pareikalauta autonomijos su lietuvių kalba mokyklose.",
+        "type": "term"
+      },
+      {
+        "front": "Vasario 16-oji (1918 m.)",
+        "back": "Lietuvos nepriklausomybės atkūrimo aktas, pasirašytas Lietuvos Tarybos.",
+        "type": "term"
+      },
+      {
+        "front": "Kovo 11-oji (1990 m.)",
+        "back": "Lietuvos nepriklausomybės atkūrimo aktas, priimtas Aukščiausiosios Tarybos.",
+        "type": "term"
+      },
+      {
+        "front": "Vilniaus konferencija (1917 m.)",
+        "back": "Susirinkimas, kuriame buvo išrinkta Lietuvos Taryba ir parengtas kelias į nepriklausomybę.",
+        "type": "term"
+      },
+      {
+        "front": "Lietuvos Taryba",
+        "back": "1917–1920 m. lietuvių politinė organizacija, parengusi nepriklausomybės aktą.",
+        "type": "term"
+      },
+      {
+        "front": "Lietuvos Persitvarkymo Sąjūdis",
+        "back": "1988 m. įkurta politinė organizacija, vadovavusi nepriklausomybės atkūrimui.",
+        "type": "term"
+      },
+      {
+        "front": "Aukščiausioji TarybaAtkuriamasis Seimas",
+        "back": "1990–1992 m. Lietuvos parlamentas, priėmęs nepriklausomybės atkūrimo aktą.",
+        "type": "term"
+      },
+      {
+        "front": "Baltijos kelias (1989 m.)",
+        "back": "Milžiniška žmonių grandinė nuo Vilniaus iki Talino – simbolinis aktas už nepriklausomybę.",
+        "type": "term"
+      },
+      {
+        "front": "1991 m. sausio 13-oji",
+        "back": "Sovietų tankų puolimas prieš Vilniaus televizijos bokštą – sovietų karinės agresijos aktas.",
+        "type": "term"
+      },
+      {
+        "front": "Antanas Smetona",
+        "back": "1874–1944, vienas iš Vasario 16-osios akto signatarų, vėliau autoritarinis prezidentas.",
+        "type": "term"
+      },
+      {
+        "front": "Mykolas Römeris",
+        "back": "1880–1945, teisininkas, kūręs Lietuvos teisės pagrindus.",
+        "type": "term"
+      },
+      {
+        "front": "Parlamentinė respublika (tarpukaris)",
+        "back": "1920–1926 m. valdymo forma Lietuvoje – daugybė partijų, bet nestabilios vyriausybės.",
+        "type": "term"
+      },
+      {
+        "front": "Steigiamasis Seimas",
+        "back": "1920 m. išrinktas pirmasis Lietuvos parlamentas.",
+        "type": "term"
+      },
+      {
+        "front": "1922 m. Lietuvos Konstitucija",
+        "back": "Įtvirtino demokratinę parlamentinę valdymo formą.",
+        "type": "term"
+      },
+      {
+        "front": "1926 m. gruodžio 17-osios perversmas",
+        "back": "Karininkų perversmas, nuvertęs demokratinę vyriausybę; Smetona tapo autoritariniu prezidentu.",
+        "type": "term"
+      },
+      {
+        "front": "Augustinas Voldemaras",
+        "back": "1883–1942, radikalus dešinysis politikas, Smetonos bendražygis perversme.",
+        "type": "term"
+      },
+      {
+        "front": "Lietuvos Respublikos Konstitucija (1992 m.)",
+        "back": "Įtvirtino pusiau prezidentinę respubliką.",
+        "type": "term"
+      },
+      {
+        "front": "2004 m.",
+        "back": "Lietuva tapo NATO ir ES nare.",
+        "type": "term"
+      },
+      {
+        "front": "Ypatingųjų Tautos atstovai",
+        "back": "1941–1944 m. trėmimų aukų palikuonys, kuriems grąžinta žemė ar suteikta kompensacija.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "3-kultūra-ir-mokslas-people",
+    "title": "3. Kultūra ir mokslas — People",
+    "group": "Istorija III gimnazijos klasė",
+    "cards": [
+      {
+        "front": "Corpus Juris Civilis",
+        "back": "Romos teisės kodeksai: Kodeksas, Digestai, Institucijos, Novelės.",
+        "type": "term"
+      },
+      {
+        "front": "Irena Veisaitė",
+        "back": "Teatrologė, visuomenės veikėja, Holokausto liudininkė, puoselėjusi atviros visuomenės idėjas.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "3-kultūra-ir-mokslas-concepts",
+    "title": "3. Kultūra ir mokslas — Concepts",
+    "group": "Istorija III gimnazijos klasė",
+    "cards": [
+      {
+        "front": "Orderis (architektūra)",
+        "back": "Architektūrinis stilius su kolonomis, architravu ir frontonu. Trys pagrindiniai: dorėniškasis, jonėniškasis, korintiškasis.",
+        "type": "term"
+      },
+      {
+        "front": "Atėnų teatras",
+        "back": "Antikinė dramos forma: tragedija (heroizmo, lemties tema) ir komedija (visuomenės kritika). Dioniso teatras Atėnuose.",
+        "type": "term"
+      },
+      {
+        "front": "Romėnų teisė",
+        "back": "Privati teisė, reguliavusi sutartis, nuosavybę ir paveldėjimą. Tapo Europos teisės pagrindu.",
+        "type": "term"
+      },
+      {
+        "front": "Graikų filosofija",
+        "back": "Mąstymas apie būtį, pažinimą, etiką, politiką, estetiką.",
+        "type": "term"
+      },
+      {
+        "front": "Teologija",
+        "back": "Mokslas apie Dievą ir tikėjimo tiesas.",
+        "type": "term"
+      },
+      {
+        "front": "Trubadūrai",
+        "back": "Viduramžių poetai muzikantai, kėlę meilės ir kilnumo idealus.",
+        "type": "term"
+      },
+      {
+        "front": "Renesansas",
+        "back": "XIV–XVI a. kultūrinis atgimimas Europoje, atgaivinęs antikos idealus. Centras – žmogus.",
+        "type": "term"
+      },
+      {
+        "front": "Humanizmas",
+        "back": "Renesanso kultūros kryptis, kurioje centras – žmogus, jo orumas ir galimybės.",
+        "type": "term"
+      },
+      {
+        "front": "Gutenbergo revoliucija",
+        "back": "Spausdinimo technologija, paskatinusi Reformaciją, švietimą ir nacionalinių kalbų plėtrą.",
+        "type": "term"
+      },
+      {
+        "front": "Heliocentrizmas",
+        "back": "Saulės centro modelis – Žemė ir planetos sukasi aplink Saulę.",
+        "type": "term"
+      },
+      {
+        "front": "Geocentrizmas",
+        "back": "Žemės centro modelis – viskas sukasi aplink Žemę (viduramžių pasaulėžiūra).",
+        "type": "term"
+      },
+      {
+        "front": "Indukcija",
+        "back": "Loginis mąstymas nuo konkrečių faktų prie bendrų išvadų.",
+        "type": "term"
+      },
+      {
+        "front": "Apšvieta (Apšvietimas)",
+        "back": "XVIII a. kultūrinis judėjimas, grindžiamas proto, kritikos ir pažangos idėjomis.",
+        "type": "term"
+      },
+      {
+        "front": "Prigimtinės teisės",
+        "back": "Žmogaus teisės, kurios yra savaime suprantamos ir neatimamos.",
+        "type": "term"
+      },
+      {
+        "front": "Impresionizmas",
+        "back": "Meno kryptis, vaizduojanti šviesos ir spalvos įspūdį, o ne tikslias detales.",
+        "type": "term"
+      },
+      {
+        "front": "Modernas / modernizmas",
+        "back": "XIX–XX a. kultūrinis ir meninis judėjimas, atsisakęs tradicinių formų.",
+        "type": "term"
+      },
+      {
+        "front": "Fotografijos ir kinematografijos pradžia",
+        "back": "XIX a. antroji pusė – naujas būdas matyti pasaulį, pakeitęs meną ir žiniasklaidą.",
+        "type": "term"
+      },
+      {
+        "front": "Ideologizacija (kultūros)",
+        "back": "Kultūros pavertimas ideologijos instrumentu.",
+        "type": "term"
+      },
+      {
+        "front": "'Išsigimęs menas' (Entartete Kunst)",
+        "back": "Nacių terminas moderniajam menui, kurį jie siekė eliminuoti.",
+        "type": "term"
+      },
+      {
+        "front": "Socrealizmas",
+        "back": "Socialistinis realizmas – menas, turintis vaizduoti 'tikrovę revoliucinės plėtros tikslais'.",
+        "type": "term"
+      },
+      {
+        "front": "Chunveibinai",
+        "back": "Kinijos kultūrinės revoliucijos jaunimo grupės (raudonieji gvardiečiai).",
+        "type": "term"
+      },
+      {
+        "front": "Kultūros paveldas",
+        "back": "Žmonijos kūrybinių pasiekimų visuma, perduodama ateities kartoms.",
+        "type": "term"
+      },
+      {
+        "front": "Materialus paveldas",
+        "back": "Pastatai, paminklai, daiktai – materialūs kultūros objektai.",
+        "type": "term"
+      },
+      {
+        "front": "Nematerialus paveldas",
+        "back": "Tradicijos, kalba, muzika, apeigos – nematerialūs kultūros elementai.",
+        "type": "term"
+      },
+      {
+        "front": "UNESCO",
+        "back": "Jungtinių Tautų švietimo, mokslo ir kultūros organizacija.",
+        "type": "term"
+      },
+      {
+        "front": "Autentiškumas (paveldo kontekste)",
+        "back": "Ar objektas išlaikęs savo pirminę formą ir medžiagas?",
+        "type": "term"
+      },
+      {
+        "front": "Restauravimas",
+        "back": "Paveldo atstatymas (gali keisti objekto išvaizdą).",
+        "type": "term"
+      },
+      {
+        "front": "Konservavimas",
+        "back": "Paveldo stabilizavimas, siekiant išsaugoti esamą būklę.",
+        "type": "term"
+      },
+      {
+        "front": "Dirbtinis intelektas",
+        "back": "Kompiuterių sistemos, gebančios atlikti užduotis, kurios paprastai reikalauja žmogaus intelekto.",
+        "type": "term"
+      },
+      {
+        "front": "Humanitarika",
+        "back": "Mokslai apie žmogų, visuomenę ir kultūrą (istorija, filosofija, literatūra, menotyra).",
+        "type": "term"
+      },
+      {
+        "front": "Mokslinė etika",
+        "back": "Moraliniai principai, reguliuojantys mokslinį tyrimą ir jo pritaikymą.",
+        "type": "term"
+      },
+      {
+        "front": "Skaitmeninimas",
+        "back": "Informacijos konvertavimas į skaitmeninę formą ir procesų perkėlimas į skaitmeninę erdvę.",
+        "type": "term"
+      },
+      {
+        "front": "LDK lotyniškosios raštijos",
+        "back": "Dokumentų rašymas lotynų kalba LDK (XIV–XVI a.).",
+        "type": "term"
+      },
+      {
+        "front": "Raštijos rusėnų kalba",
+        "back": "Senoji slavų kalba, naudota stačiatikių bažnyčioje LDK.",
+        "type": "term"
+      },
+      {
+        "front": "Polonizacija",
+        "back": "Lenkų kalbos ir kultūros plėtra LDK ir Lietuvoje.",
+        "type": "term"
+      },
+      {
+        "front": "Vilniaus barokas",
+        "back": "Savitas Rytų Europos baroko variantas, kuriame susipynė italų, vokiški ir vietiniai elementai.",
+        "type": "term"
+      },
+      {
+        "front": "Barokas",
+        "back": "XVII–XVIII a. meno ir architektūros stilius, pasižymintis dideliu dekoratyvumu.",
+        "type": "term"
+      },
+      {
+        "front": "Klasicizmas",
+        "back": "XVIII a. pab.–XIX a. pr. architektūros stilius, siekiantis antikos proporcijų ir simetrijos.",
+        "type": "term"
+      },
+      {
+        "front": "Parapinė mokykla",
+        "back": "Kaimo pradinė mokykla prie bažnyčios.",
+        "type": "term"
+      },
+      {
+        "front": "Kolegija",
+        "back": "Aukštesnioji mokykla, dažnai rengusi kunigus.",
+        "type": "term"
+      },
+      {
+        "front": "Etninė kultūra",
+        "back": "Tautos ar etninės grupės kultūrinis paveldas.",
+        "type": "term"
+      },
+      {
+        "front": "Etnocentrizmas",
+        "back": "Savos etninės grupės vertinimas kaip aukščiausios vertybės.",
+        "type": "term"
+      },
+      {
+        "front": "Idišo kalba",
+        "back": "Žydų germanų kalba, buvusi kasdienė Vilniaus gatvių kalba.",
+        "type": "term"
+      },
+      {
+        "front": "Štetlas",
+        "back": "Mažas miestelis su didele žydų bendruomene – Lietuvos kultūros dalis iki Holokausto.",
+        "type": "term"
+      },
+      {
+        "front": "Filomatai / filaretai",
+        "back": "Slaptos studentų draugijos Vilniaus universitete (XIX a. pr.), puoselėjusios lietuvių ir lenkų kultūrą.",
+        "type": "term"
+      },
+      {
+        "front": "Knygnešiai",
+        "back": "Žmonės, slapta vežę lietuviškas knygas iš Mažosios Lietuvos į Didžiąją.",
+        "type": "term"
+      },
+      {
+        "front": "Rusifikacija (kultūros kontekste)",
+        "back": "Carinės valdžios politika slopinti vietines kalbas ir kultūras (uždarytos mokyklos, draudžiama spauda).",
+        "type": "term"
+      },
+      {
+        "front": "Kauno modernizmas",
+        "back": "XX a. tarpukario modernistinė Kauno architektūra (funkcionalizmas, konstruktyvizmas).",
+        "type": "term"
+      },
+      {
+        "front": "Tautinis stilius",
+        "back": "Architektūros kryptis, derinanti modernias formas su tautiniais ornamentais.",
+        "type": "term"
+      },
+      {
+        "front": "Glavlit",
+        "back": "Sovietų Sąjungos cenzūros institucija.",
+        "type": "term"
+      },
+      {
+        "front": "Savicenzūra",
+        "back": "Savanoriškas ribojimas, siekiant išvengti valstybinės cenzūros.",
+        "type": "term"
+      },
+      {
+        "front": "Sovietinis modernizmas",
+        "back": "Oficialus sovietinis menas ir architektūra, atspindintis socialistinius idealus.",
+        "type": "term"
+      },
+      {
+        "front": "Brutalizmas",
+        "back": "Architektūros stilius, pabrėžiantis betono masę ir funkcionalumą.",
+        "type": "term"
+      },
+      {
+        "front": "Mikrorajonas",
+        "back": "Didelis daugiabučių kvartalas, tipinis sovietiniam planavimui.",
+        "type": "term"
+      },
+      {
+        "front": "Algimantas ir Vytautas Nasvyčiai",
+        "back": "Architektai, kūrę modernius teatro ir kultūros pastatus sovietinėje Lietuvoje.",
+        "type": "term"
+      },
+      {
+        "front": "Atvira visuomenė",
+        "back": "Visuomenės modelis, grindžiamas kritiniu mąstymu, diskusija ir demokratiniu valdymu (pagal Karl Popper).",
+        "type": "term"
+      },
+      {
+        "front": "Pluralizmas",
+        "back": "Skirtingų nuomonių, kultūrų, gyvenimo būdų pripažinimas ir sugyvenimas.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "3-kultūra-ir-mokslas-events",
+    "title": "3. Kultūra ir mokslas — Events",
+    "group": "Istorija III gimnazijos klasė",
+    "cards": [
+      {
+        "front": "Justinianas I Didysis",
+        "back": "482–565, Bizantijos imperatorius, užsakęs 'Corpus Juris Civilis' – Romos teisės kodeksų rinkinį.",
+        "type": "term"
+      },
+      {
+        "front": "Platonas",
+        "back": "Apie 428–348 m. pr. Kr., sukūrė idėjų teoriją. 'Respublika' – idealios valstybės aprašymas.",
+        "type": "term"
+      },
+      {
+        "front": "Aristotelis",
+        "back": "384–322 m. pr. Kr., Platono mokinys. Kūrė logiką, klasifikavo gyvūnus, empirinis pažinimo metodas.",
+        "type": "term"
+      },
+      {
+        "front": "Eleonora Akvitanietytė",
+        "back": "1122–1204, viena įtakingiausių viduramžių moterų, rėmusi trubadūrų poeziją.",
+        "type": "term"
+      },
+      {
+        "front": "Dantė Aligjeris",
+        "back": "1265–1321, parašęs 'Dieviškąją komediją' – krikščioniškos teologijos epicą.",
+        "type": "term"
+      },
+      {
+        "front": "Erazmas Roterdamietis",
+        "back": "1466–1536, humanistas, kritikavęs bažnyčios dogmatizmą.",
+        "type": "term"
+      },
+      {
+        "front": "Leonardo da Vinčis",
+        "back": "1452–1519, 'universalus žmogus' – dailininkas, inžinierius, anatomas, muzikantas.",
+        "type": "term"
+      },
+      {
+        "front": "Johanas Gutenbergas",
+        "back": "Apie 1400–1468, apie 1445 m. išrado kilnojamąsias raides Europoje.",
+        "type": "term"
+      },
+      {
+        "front": "Mikalojus Kopernikas",
+        "back": "1473–1543, 1543 m. pasiūlė heliocentrinę sistemą ('Apie dangaus sferų sukimąsi').",
+        "type": "term"
+      },
+      {
+        "front": "Galileo Galilėjus",
+        "back": "1564–1642, teleskopu įrodė, kad Jupiteris turi mėnulius – ne viskas sukasi aplink Žemę.",
+        "type": "term"
+      },
+      {
+        "front": "Fransis Beikonas",
+        "back": "1561–1626, pasiūlė indukcijos metodą: nuo faktų prie hipotezių.",
+        "type": "term"
+      },
+      {
+        "front": "Tomas Akvinietis",
+        "back": "1225–1274, bandė sutaikyti Aristotelį su krikščionybe per teologiją.",
+        "type": "term"
+      },
+      {
+        "front": "Džonas Lokas",
+        "back": "1632–1704, teigė, kad žmogus turi prigimtines teises (gyvybė, laisvė, nuosavybė).",
+        "type": "term"
+      },
+      {
+        "front": "Šarlis Lui de Monteskjė",
+        "back": "1689–1755, suformulavo valdžių atskyrimo principą 'Apie įstatymų dvasioje' (1748).",
+        "type": "term"
+      },
+      {
+        "front": "Imanuelis Kantas",
+        "back": "1724–1804, ragino 'drįsti žinoti' – mąstyti savarankiškai.",
+        "type": "term"
+      },
+      {
+        "front": "JAV konstitucija (1787 m.)",
+        "back": "Pirmoji rašytinė konstitucija pasaulyje – prigimtinių teisių deklaracija, valdžių atskyrimas.",
+        "type": "term"
+      },
+      {
+        "front": "Tomas Džefersonas",
+        "back": "1743–1826, vienas iš JAV įkūrėjų, respublikonizmo principų puoselėtojas.",
+        "type": "term"
+      },
+      {
+        "front": "Izaokas Niutonas",
+        "back": "1643–1727, suformulavo gravitacijos dėsnį 'Matematiniuose gamtos filosofijos pagrinduose' (1687).",
+        "type": "term"
+      },
+      {
+        "front": "Marija Kiuri",
+        "back": "1867–1934, tyrinėjo radioaktyvumą, pirmoji moteris gavusi Nobelio premiją.",
+        "type": "term"
+      },
+      {
+        "front": "Albertas Einšteinas",
+        "back": "1879–1955, sukūrė reliatyvumo teoriją (1905, 1915), pakeitęs erdvės ir laiko supratimą.",
+        "type": "term"
+      },
+      {
+        "front": "Tomas Edisonas",
+        "back": "1847–1931, išrado fonografą ir praktišką kaitrinę lemputę.",
+        "type": "term"
+      },
+      {
+        "front": "Edvardas Manė",
+        "back": "1832–1883, prancūzų tapytojas, vienas impresionizmo pradininkų.",
+        "type": "term"
+      },
+      {
+        "front": "Ogiustas Rodenas",
+        "back": "1840–1917, skulptorius, palikęs nelygius paviršius – revoliucija prieš akademinį tobulumą.",
+        "type": "term"
+      },
+      {
+        "front": "Oto Vagneris",
+        "back": "1841–1918, moderniosios architektūros pradininkas, funkcionalizmo šalininkas.",
+        "type": "term"
+      },
+      {
+        "front": "Joseph Goebbels",
+        "back": "1898–1945, nacių Vokietijos propagandos ministras, organizavęs knygų deginimą.",
+        "type": "term"
+      },
+      {
+        "front": "Knygų deginimas (1933 m.)",
+        "back": "Nacių organizuotas modernių knygų naikinimas Vokietijoje.",
+        "type": "term"
+      },
+      {
+        "front": "'Filosofų laivas' (1922 m.)",
+        "back": "Sovietų Sąjunga išvežė inteligentus į užsienį – simbolis, kaip valstybė atsikrato nepriklausomų minčių.",
+        "type": "term"
+      },
+      {
+        "front": "Kultūrinė revoliucija Kinijoje",
+        "back": "1966–1976, Mao Dzedongo iniciatyva – chunveibinai naikino bibliotekas, šventyklas, mušė mokytojus.",
+        "type": "term"
+      },
+      {
+        "front": "Borisas Pasternakas",
+        "back": "1890–1960, parašė 'Daktarą Živagą' – persekiojamas Sovietų Sąjungoje.",
+        "type": "term"
+      },
+      {
+        "front": "Aleksandras Solženicynas",
+        "back": "1918–2008, 'Gulago salynas' – atskleidė Sovietų Sąjungos teroro mechanizmus.",
+        "type": "term"
+      },
+      {
+        "front": "Česlovas Milošas",
+        "back": "1911–2004, lenkų poetas, rašęs apie totalitarizmo poveikį sąmonei.",
+        "type": "term"
+      },
+      {
+        "front": "Sergejus Eizenšteinas",
+        "back": "1898–1948, sukūrė filmus ('Bronenosoec Potiomkinas'), kurie tarnavo sovietinei propagandai.",
+        "type": "term"
+      },
+      {
+        "front": "Leni Riefenstahl",
+        "back": "1902–2003, sukūrė nacių partijos kongreso filmą 'Valia' – techniškai genialų, ideologiškai bjaurų.",
+        "type": "term"
+      },
+      {
+        "front": "Pasaulio kultūros ir gamtos paveldo apsaugos konvencija (1972 m.)",
+        "back": "Pirmasis tarptautinis susitarimas dėl paveldo apsaugos valstybių lygiu.",
+        "type": "term"
+      },
+      {
+        "front": "Vilniaus katedros mokykla",
+        "back": "1397 m. – pirmoji mokykla Lietuvoje, rengusi kunigus.",
+        "type": "term"
+      },
+      {
+        "front": "Pranciškus Skorina",
+        "back": "Apie 1490–1552, 1522 m. Vilniuje įkūrė pirmąją spaustuvę Rytų Europoje.",
+        "type": "term"
+      },
+      {
+        "front": "Inkunabula",
+        "back": "Knygos, atspausdintos iki 1501 m.",
+        "type": "term"
+      },
+      {
+        "front": "Vilniaus akademija (universitetas)",
+        "back": "1579 m. įkurta jėzuitų – aukščiausiojo mokslo centras Lietuvoje.",
+        "type": "term"
+      },
+      {
+        "front": "Martynas Počobutas",
+        "back": "1728–1810, Vilniaus akademijos astronomas ir matematikas.",
+        "type": "term"
+      },
+      {
+        "front": "Motiejus Kazimieras Sarbievijus",
+        "back": "1595–1640, lotynų poetas, vadintas 'krikščioniškuoju Horacijumi'.",
+        "type": "term"
+      },
+      {
+        "front": "Jono Kristupo Glaubicas",
+        "back": "M. 1767, architektas, kūręs Vilniaus klasicistinius pastatus.",
+        "type": "term"
+      },
+      {
+        "front": "Jacques Lipchitz",
+        "back": "1891–1973, žydų kilmės skulptorius iš Druskininkų, tapęs žymiu XX a. modernistu Paryžiuje.",
+        "type": "term"
+      },
+      {
+        "front": "Sionizmas",
+        "back": "Žydų politinis judėjimas, siekęs sukurti žydų nacionalinę valstybę (įgyvendinta 1948 m. Izraelyje).",
+        "type": "term"
+      },
+      {
+        "front": "Simonas Daukantas",
+        "back": "1793–1864, rašė istoriją lietuvių kalba, siekdamas sukurti modernią tautą.",
+        "type": "term"
+      },
+      {
+        "front": "Martynas Jankus",
+        "back": "1858–1946, spaustuvininkas iš Ragainės, slapta leidęs lietuviškas knygas.",
+        "type": "term"
+      },
+      {
+        "front": "Vincas Kudirka",
+        "back": "1858–1899, sukūrė tautinį hymną 'Lietuva, Tėvyne mūsų'.",
+        "type": "term"
+      },
+      {
+        "front": "Jonas Jablonskis",
+        "back": "1861–1930, standartizavo lietuvių rašybą ir kalbą.",
+        "type": "term"
+      },
+      {
+        "front": "Dionizas Poška",
+        "back": "1760–1830, sukūrė 'Baublio' muziejų – lietuviškos kultūros manifestą.",
+        "type": "term"
+      },
+      {
+        "front": "Alaiza PaškevičCiotka",
+        "back": "1876–1916, rašytoja, rėmusi lietuvių švietimą.",
+        "type": "term"
+      },
+      {
+        "front": "Vilniaus universiteto uždarymas",
+        "back": "1832 m. – smūgis Lietuvos inteligentijai, dalis rusifikacijos politikos.",
+        "type": "term"
+      },
+      {
+        "front": "Spaudos draudimo atšaukimas",
+        "back": "1904 m. – carinė valdžia atšaukė draudimą spausdinti lietiškais rašmenimis.",
+        "type": "term"
+      },
+      {
+        "front": "Lietuvos universitetas Kaune (1922 m.)",
+        "back": "Pirmasis lietuvių kalba dėstantis universitetas.",
+        "type": "term"
+      },
+      {
+        "front": "Vincas Čepinskis",
+        "back": "1863–1939, pirmasis Lietuvos universiteto rektorius, botanikas.",
+        "type": "term"
+      },
+      {
+        "front": "Levas Karsavinas",
+        "back": "1882–1952, istorikas ir filosofas, rašęs apie Europos ir Rusijos kultūrų santykį.",
+        "type": "term"
+      },
+      {
+        "front": "Mykolas Römeris (kultūros kontekste)",
+        "back": "1880–1945, teisininkas, filosofas. Jo vardu pavadintas universitetas Vilniuje.",
+        "type": "term"
+      },
+      {
+        "front": "Stasys Šalkauskis",
+        "back": "1886–1941, filosofas, kūręs lietuvių filosofijos mokyklą.",
+        "type": "term"
+      },
+      {
+        "front": "Vytautas LandsbergisŽemkalnis",
+        "back": "1893–1993, architektas, kūręs Kauno modernizmo pastatus.",
+        "type": "term"
+      },
+      {
+        "front": "Sofija KymantaitėČiurlionienė",
+        "back": "1886–1958, rašytoja, visuomenės veikėja.",
+        "type": "term"
+      },
+      {
+        "front": "Karolis Reisonas",
+        "back": "1890–1981, kompozitorius, moderniosios lietuvių muzikos pradininkas.",
+        "type": "term"
+      },
+      {
+        "front": "Juozas Miltinis",
+        "back": "1907–1994, Panevėžio teatro režisierius, kūręs modernųjį teatrą sovietmečiu.",
+        "type": "term"
+      },
+      {
+        "front": "Jonas Jurašas",
+        "back": "G. 1932, režisierius, kurio spektakliai dažnai turėjo dvigubą prasmę sovietmečiu.",
+        "type": "term"
+      },
+      {
+        "front": "Atviros Lietuvos fondas (ALF)",
+        "back": "Pirmoji nepriklausoma labdaros organizacija Lietuvoje (1990-ieji), finansavusi kultūros ir švietimo projektus.",
+        "type": "term"
+      },
+      {
+        "front": "Eimuntas Nekrošius",
+        "back": "1952–2018, vienas žymiausių Lietuvos teatro režisierių, tarptautiškai pripažintas.",
+        "type": "term"
+      },
+      {
+        "front": "Algis P. Piskarskas",
+        "back": "1945–2023, fizikas, lazerių tyrimų pradininkas Lietuvoje.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "4-žmogus-ir-aplinka-people",
+    "title": "4. Žmogus ir aplinka — People",
+    "group": "Istorija III gimnazijos klasė",
+    "cards": [
+      {
+        "front": "Gajus Plinijus Vyresnysis",
+        "back": "23–79 m., parašęs 'Natūraliąją istoriją' – bandymą aprašyti visą žinomą pasaulį.",
+        "type": "term"
+      },
+      {
+        "front": "Krišpinas Kiršenšteinas",
+        "back": "LDK miškų ūkio reformatorius.",
+        "type": "term"
+      },
+      {
+        "front": "Grigalius Valavičius",
+        "back": "LDK ekonomistas, rašęs apie ūkio gerinimą.",
+        "type": "term"
+      },
+      {
+        "front": "Kuršių Nerija",
+        "back": "Unikali smėlio juosta tarp Baltijos jūros ir Kuršių marių – XIX a. tapo 'keliautojų rojumi'.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "4-žmogus-ir-aplinka-concepts",
+    "title": "4. Žmogus ir aplinka — Concepts",
+    "group": "Istorija III gimnazijos klasė",
+    "cards": [
+      {
+        "front": "Irigacija",
+        "back": "Dirbtinis laukų drėkinimas kanalais arba vamzdžiais.",
+        "type": "term"
+      },
+      {
+        "front": "Kosmosas (filosofijoje)",
+        "back": "Graikų terminas, reiškiantis tvarkingą, harmoningą pasaulį.",
+        "type": "term"
+      },
+      {
+        "front": "Ikisokratikai",
+        "back": "Ankstyvieji graikų filosofai, aiškinę gamtą racionaliai (Talis, Anaksimandras, Heraklitas).",
+        "type": "term"
+      },
+      {
+        "front": "Keturių elementų teorija",
+        "back": "Aristotelio fizika: žemė, vanduo, oras, ugnis.",
+        "type": "term"
+      },
+      {
+        "front": "Akvedukas",
+        "back": "Vandens tiekimo kanalas, dažnai tiltu (Romos inžinerijos pasiekimas).",
+        "type": "term"
+      },
+      {
+        "front": "Huangdi",
+        "back": "Legendinis Kinijos valdovas, siejamas su medicinos kanonu.",
+        "type": "term"
+      },
+      {
+        "front": "Gilgamešo epas",
+        "back": "Vienas seniausių literatūrinių tekstų apie karaliaus siekį įveikti mirtį ir gamtos jėgas.",
+        "type": "term"
+      },
+      {
+        "front": "Didžiosios kinų sienos statyba",
+        "back": "Pradėta VII a. pr. Kr., vėliau tęsta – gigantiškas gynybos projektas nuo šiaurės genčių.",
+        "type": "term"
+      },
+      {
+        "front": "Juodoji mirtis",
+        "back": "XIV a. vidurys – bubulinis maras, pražudęs apie trečdalį Europos gyventojų.",
+        "type": "term"
+      },
+      {
+        "front": "Autochtonai",
+        "back": "Vietiniai kolonizuotų teritorijų gyventojai.",
+        "type": "term"
+      },
+      {
+        "front": "Konkistadorai",
+        "back": "Ispanų ir portugalų užkariautojai Amerikoje XVI a.",
+        "type": "term"
+      },
+      {
+        "front": "Kolonializmas",
+        "back": "Teritorijų užkariavimas ir valdymas, dažnai siekiant išteklių.",
+        "type": "term"
+      },
+      {
+        "front": "Naujasis pasaulis",
+        "back": "Amerikos žemynai (šiaurinė ir pietinė Amerika).",
+        "type": "term"
+      },
+      {
+        "front": "Industrinė revoliucija",
+        "back": "Ekonominis ir technologinis virsmas nuo žemdirbystės prie pramonės, prasidėjęs XVIII a. pab.",
+        "type": "term"
+      },
+      {
+        "front": "Garo variklis",
+        "back": "Pagrindinė industrinės revoliucijos technologija, varusi fabrikus, traukinius ir laivus.",
+        "type": "term"
+      },
+      {
+        "front": "Akmens anglis",
+        "back": "Pagrindinis industrinės revoliucijos kuras – leido gaminti pigų plieną.",
+        "type": "term"
+      },
+      {
+        "front": "Geležinkelių tinklas",
+        "back": "Traukinių kelių sistema, transformavusi prekybą ir migraciją XIX a.",
+        "type": "term"
+      },
+      {
+        "front": "Vidaus degimo variklis",
+        "back": "Technologija, paskatinusi automobilių ir kitos transporto plėtrą.",
+        "type": "term"
+      },
+      {
+        "front": "Elektros energija",
+        "back": "Naujas energijos šaltinis, pakeitęs pramonę ir kasdienį gyvenimą.",
+        "type": "term"
+      },
+      {
+        "front": "Nacionalinis parkas",
+        "back": "Saugoma gamtos teritorija, kurioje ribojama žmogaus veikla.",
+        "type": "term"
+      },
+      {
+        "front": "Gamtosauginis judėjimas",
+        "back": "Visuomeninis siekis apsaugoti gamtą ir skatinti tvarų vystymąsi.",
+        "type": "term"
+      },
+      {
+        "front": "Demografinis sprogimas",
+        "back": "Spartus gyventojų skaičiaus augimas XX a.",
+        "type": "term"
+      },
+      {
+        "front": "Globali klimato kaita",
+        "back": "Ilgalaikis klimato parametrų pokytis, daugiausia dėl žmogaus veiklos (CO₂ emisijos).",
+        "type": "term"
+      },
+      {
+        "front": "Iškastinis kuras",
+        "back": "Anglis, nafta, dujos – pagrindiniai šiltnamio efektą sukeliančių dujų šaltiniai.",
+        "type": "term"
+      },
+      {
+        "front": "Žalioji ekonomika",
+        "back": "Ekonomikos modelis, siekiantis mažinti aplinkos taršą ir naudoti atsinaujinančius išteklius.",
+        "type": "term"
+      },
+      {
+        "front": "Žiedinė ekonomika",
+        "back": "Modelis, kuriame produktai ir medžiagos nuolat perdirbamos ir naudojamos pakartotinai.",
+        "type": "term"
+      },
+      {
+        "front": "Nulinės emisijos",
+        "back": "Tikslas visai neskleisti šiltnamio efektą sukeliančių dujų (arba kompensuoti emisijas).",
+        "type": "term"
+      },
+      {
+        "front": "Lobizmas",
+        "back": "Grupių siekis daryti įtaką politikams savo interesams.",
+        "type": "term"
+      },
+      {
+        "front": "Antropocenas",
+        "back": "Siūlomas geologinis epocha, prasidėjęs dėl žmogaus poveikio Žemei.",
+        "type": "term"
+      },
+      {
+        "front": "Vytinė",
+        "back": "Deginamoji žemdirbystė: miškas sudeginamas, o pelenai tręšia dirvą.",
+        "type": "term"
+      },
+      {
+        "front": "Valakas",
+        "back": "Stačiakampis žemės sklypas, suformuotas valakų reformos metu.",
+        "type": "term"
+      },
+      {
+        "front": "Trilaukė sėjomaina",
+        "back": "Trys sklypai: vienas žiemkenčiams, antras vasarojams, trečias poilsiui.",
+        "type": "term"
+      },
+      {
+        "front": "Sieliai",
+        "back": "Dūmų (namų ūkių) skaičius, naudotas mokesčių apskaičiavimui LDK.",
+        "type": "term"
+      },
+      {
+        "front": "Valstybinis miškas",
+        "back": "Miškas, priklausantis valdovui arba valstybei.",
+        "type": "term"
+      },
+      {
+        "front": "Miškų revizija (XVI a.)",
+        "back": "Valstybės bandymas kontroliuoti miško išteklius LDK.",
+        "type": "term"
+      },
+      {
+        "front": "Gatvinis kaimas",
+        "back": "Tipinė LDK gyvenvietė, kur sodybos išsidėsčiusios palei kelią.",
+        "type": "term"
+      },
+      {
+        "front": "Žilibero de Lanua",
+        "back": "XVI a. keliautojas, aprašęs Lietuvos kraštovaizdį.",
+        "type": "term"
+      },
+      {
+        "front": "Vilhelmo kanalas",
+        "back": "Nebaigtas Rusijos projektas jungti Baltiją su Juodąja jūra.",
+        "type": "term"
+      },
+      {
+        "front": "Druskininkų kurortas",
+        "back": "XIX a. įkurtas dėl mineralinių versmių – poilsio ir sveikatos centras.",
+        "type": "term"
+      },
+      {
+        "front": "Rekreacija",
+        "back": "Poilsis ir laisvalaikio praleidimas gamtoje.",
+        "type": "term"
+      },
+      {
+        "front": "Melioracija",
+        "back": "Dirbtinis pelkių nusausinimas žemės ūkiui gerinti.",
+        "type": "term"
+      },
+      {
+        "front": "Kolūkinė gyvenvietė",
+        "back": "Sovietinis kaimo tipas, kai individualios sodybos pakeičiamos daugiabučiais.",
+        "type": "term"
+      },
+      {
+        "front": "Karinis poligonas",
+        "back": "Kariuomenės mokymų teritorija, kurioje ribojama civilinė veikla.",
+        "type": "term"
+      },
+      {
+        "front": "Kopų užtvindymas",
+        "back": "Miškininkų darbai Kuršių Nerijoje, stabilizavę smėlį.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "4-žmogus-ir-aplinka-events",
+    "title": "4. Žmogus ir aplinka — Events",
+    "group": "Istorija III gimnazijos klasė",
+    "cards": [
+      {
+        "front": "Neolito revoliucija",
+        "back": "Perėjimas nuo medžioklės ir rinkimo prie žemdirbystės ir gyvulininkystės (apie 10 000 m. pr. Kr.).",
+        "type": "term"
+      },
+      {
+        "front": "Kristupas Kolumbas",
+        "back": "1451–1506, 1492 m. atplaukė į Ameriką, pradėdamas Kolumbinį apsikeitimą.",
+        "type": "term"
+      },
+      {
+        "front": "Vasko da Gama",
+        "back": "Apie 1460–1524, 1498 m. pasiekė Indiją aplink Afriką.",
+        "type": "term"
+      },
+      {
+        "front": "Kolumbinis apsikeitimas",
+        "back": "Biologinių rūšių, ligų ir kultūrų mainai tarp Senojo ir Naujojo pasaulių po 1492 m.",
+        "type": "term"
+      },
+      {
+        "front": "Edvardas Dženeris",
+        "back": "1749–1823, 1796 m. sugalvojo skiepus nuo raupų – pirmasis sistemingas ligos prevencijos būdas.",
+        "type": "term"
+      },
+      {
+        "front": "Skiepai (Dženerio)",
+        "back": "1796 m. sukurtas būdas apsisaugoti nuo raupų – pakeitė žmonijos istoriją.",
+        "type": "term"
+      },
+      {
+        "front": "Džordžas Stivensas",
+        "back": "1781–1848, sukūrė pirmąjį viešąjį geležinkelį (Liverpulio–Mančesterio liniją, 1830 m.).",
+        "type": "term"
+      },
+      {
+        "front": "Sueco kanalas",
+        "back": "Atidarytas 1869 m., sutrumpinęs kelią iš Europos į Aziją.",
+        "type": "term"
+      },
+      {
+        "front": "Džonas Deividsonas Rokfeleris",
+        "back": "1839–1937, naftos magnatas, sukūręs 'Standard Oil' imperiją.",
+        "type": "term"
+      },
+      {
+        "front": "Henris Deividas Toras",
+        "back": "1817–1862, parašęs 'Valdeną' – kritiką materializmui ir šauksmą gyventi arčiau gamtos.",
+        "type": "term"
+      },
+      {
+        "front": "Jeloustouno nacionalinis parkas",
+        "back": "1872 m., pirmasis nacionalinis parkas pasaulyje (JAV).",
+        "type": "term"
+      },
+      {
+        "front": "Černobylio atominės elektrinės avarija (1986 m.)",
+        "back": "Didžiausia branduolinė katastrofa istorijoje – radioaktyviosios dulkės pasklido po Europą.",
+        "type": "term"
+      },
+      {
+        "front": "Reičel Karlson (Rachel Carson)",
+        "back": "1907–1964, 'Pavasaris tyli' (1962) – knyga apie pesticidų pavojų, paskatinusi gamtosauginį judėjimą.",
+        "type": "term"
+      },
+      {
+        "front": "'Žemės diena'",
+        "back": "Pirmą kartą paminėta 1970 m. – pilietinis signalas, kad aplinkosauga yra politinis klausimas.",
+        "type": "term"
+      },
+      {
+        "front": "Birutė Galdikas",
+        "back": "G. 1946, lietuvių kilmės primatologė, tyrinėjusi orangutangus Borneo.",
+        "type": "term"
+      },
+      {
+        "front": "Jungtinių Tautų bendroji klimato kaitos konvencija (1992 m.)",
+        "back": "Tarptautinis susitarimas, pripažinęs klimato kaitos problemą.",
+        "type": "term"
+      },
+      {
+        "front": "Kijoto protokolas (1997 m.)",
+        "back": "Tarptatinis susitarimas dėl šiltnamio efektą sukeliančių dujų mažinimo.",
+        "type": "term"
+      },
+      {
+        "front": "Paryžiaus susitarimas (2015 m.)",
+        "back": "Tarptautinis klimato susitarimas, siekiantis riboti globalų atšilimą.",
+        "type": "term"
+      },
+      {
+        "front": "Valakų reforma (1557 m.)",
+        "back": "LDK žemėtvarkos pertvarka – bendros žemės suskaidytos į stačiakampius valakus, įvesta trilaukė sėjomaina.",
+        "type": "term"
+      },
+      {
+        "front": "Didžioji maro epidemija (1709–1711)",
+        "back": "Nusinešė trečdalį ar daugiau LDK gyventojų – demografinis smūgis.",
+        "type": "term"
+      },
+      {
+        "front": "Gotlybas Dovydas",
+        "back": "1870–1943, miškininkas, stabilizavęs Kuršių Nerijos kopas.",
+        "type": "term"
+      },
+      {
+        "front": "Georgas Dovydas Kuvertas",
+        "back": "1857–1943, miškininkas, dirbęs Kuršių Nerijoje.",
+        "type": "term"
+      },
+      {
+        "front": "Sankt Peterburgo–Varšuvos geležinkelis",
+        "back": "Atidarytas 1862 m., pakeitęs Lietuvos prekybą ir gyvenvietes.",
+        "type": "term"
+      },
+      {
+        "front": "Siaurasis geležinkelis",
+        "back": "Geležinkelis su 600 mm vėžių pločiu, tipiškas Aukštaitijai.",
+        "type": "term"
+      },
+      {
+        "front": "Aukštaitijos nacionalinis parkas",
+        "back": "1974 m. – pirmasis nacionalinis parkas Lietuvoje.",
+        "type": "term"
+      },
+      {
+        "front": "Ekohumanistinis klubas 'Atgaja'",
+        "back": "1987 m. – viena pirmųjų nepriklausomų ekologinių organizacijų Lietuvoje.",
+        "type": "term"
+      },
+      {
+        "front": "'Apkabinkime Baltiją' (1987 m.)",
+        "back": "Ekologinė akcija prieš Baltijos jūros užterštumą – turėjo ir politinę potekstę.",
+        "type": "term"
+      },
+      {
+        "front": "Ignalinos atominė elektrinė",
+        "back": "Paleista 1983 m., uždaryta 2009 m. – sąlyga Lietuvos stojimui į ES.",
+        "type": "term"
+      }
+    ]
+  }
+];
