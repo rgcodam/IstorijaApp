@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>History Swipe Deck</title>
+    <title>Istorija for Bums</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="page">
       <header class="topbar">
         <div class="brand">
-          <span class="brand__title">History Swipe Deck</span>
-          <span class="brand__subtitle">Swipe to learn Lithuanian history</span>
+          <span class="brand__title">Istorija for Bums</span>
+          <span class="brand__subtitle">Sveiki atvykę į istorijos mokymą!</span>
         </div>
         <div class="topbar__controls">
           <div class="deck-status" aria-live="polite">
@@ -81,6 +81,31 @@
           </div>
         </div>
 
+        <div style="height: 20px;"></div>
+
+        <div class="test-section" id="testSection" hidden>
+          <div class="test-header">
+            <h2 id="testTitle"></h2>
+            <div class="test-progress">
+              <span id="testProgress">1 / 30</span>
+            </div>
+          </div>
+          <div class="test-content">
+            <p id="testQuestion"></p>
+            <div class="test-options" id="testOptions"></div>
+            <div class="test-feedback" id="testFeedback" hidden>
+              <p id="testFeedbackText"></p>
+              <button class="button button--primary" id="nextQuestionBtn">Next Question</button>
+            </div>
+          </div>
+          <div class="test-results" id="testResults" hidden>
+            <h2>Test Complete!</h2>
+            <p id="testScore"></p>
+            <button class="button button--primary" id="testRestartBtn">Restart Test</button>
+            <button class="button" id="backToDashboardBtn">Back to Dashboard</button>
+          </div>
+        </div>
+
         <div class="completion" id="completion" hidden>
           <h2>All done</h2>
           <p id="completionStats"></p>
@@ -98,6 +123,7 @@
         <button class="button" id="rightBtn">Swipe Right (Know)</button>
         <button class="button button--ghost" id="undoBtn" disabled>Undo</button>
         <button class="button randomize-toggle" id="shuffleBtn" type="button" aria-pressed="false">Randomizer: Off</button>
+        <button class="button randomize-toggle" id="reverseBtn" type="button" aria-pressed="false">Answer First: Off</button>
         <button class="button button--ghost" id="resetBtn">Reset</button>
       </section>
 
@@ -119,7 +145,8 @@
     </div>
 
     <script src="data/figures.js"></script>
-    <script src="data/program.js"></script>
+    <script src="data/new_info.js"></script>
+    <script src="data/newer_info.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

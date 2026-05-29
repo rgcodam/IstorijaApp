@@ -1,7 +1,86 @@
 const figures = window.FIGURES || [];
-const programDecks = window.HISTORY_DECKS || [];
+let programDecks = [];
 
 const placeholderImage = "assets/portraits/placeholder.png";
+
+// Load decks from new_INFO data (loaded via new_info.js)
+const loadDecksFromJSON = async () => {
+  try {
+    console.log("Starting to load decks from NEW_INFO_DATA");
+    
+    const data = window.NEW_INFO_DATA;
+    if (!data) {
+      throw new Error("NEW_INFO_DATA not found in global scope");
+    }
+    
+    console.log("JSON data loaded:", data);
+    
+    programDecks = [];
+    
+    if (data.subcategories_by_subject && Array.isArray(data.subcategories_by_subject)) {
+      data.subcategories_by_subject.forEach((section, sectionIndex) => {
+        const sectionTitle = section.section || `Section ${sectionIndex + 1}`;
+        const group = sectionTitle;
+        
+        if (section.subcategories && Array.isArray(section.subcategories)) {
+          section.subcategories.forEach((subcategory, subIndex) => {
+            const subcategoryTitle = subcategory.subcategory || `Subcategory ${subIndex + 1}`;
+            const deckId = `deck-${sectionIndex}-${subIndex}`;
+            
+            const cards = (subcategory.cards || []).map((card) => ({
+              front: card.a || "",
+              back: card.q || "",
+              type: card.type_category ? "term" : "term",
+            }));
+            
+            if (cards.length > 0) {
+              programDecks.push({
+                id: deckId,
+                title: subcategoryTitle,
+                description: sectionTitle,
+                group: group,
+                tier: "small",
+                cards: cards,
+              });
+            }
+          });
+        }
+      });
+    }
+    
+    console.log("Loaded", programDecks.length, "decks");
+    
+    // Re-initialize the app with loaded decks
+    reinitializeDecks();
+  } catch (error) {
+    console.error("Error loading decks from NEW_INFO_DATA:", error);
+  }
+};
+
+const reinitializeDecks = () => {
+  deckMap.clear();
+  const newDecks = [...programDecks, makePeopleDeck()];
+  
+  // Add practice tests
+  const practiceTests = window.PRACTICE_TESTS || [];
+  practiceTests.forEach((test) => {
+    newDecks.push({
+      id: test.id,
+      title: test.title,
+      description: test.description,
+      group: "Practice Tests",
+      tier: "special",
+      isTest: true,
+      questions: test.questions,
+    });
+  });
+  
+  newDecks.forEach((deck) => {
+    deckMap.set(deck.id, deck);
+  });
+  decks = newDecks; // Update the global decks array
+  initDashboardState();
+};
 
 const makePeopleDeck = () => ({
   id: "asmenybes",
@@ -17,8 +96,9 @@ const makePeopleDeck = () => ({
   })),
 });
 
-const decks = [...programDecks, makePeopleDeck()];
-const deckMap = new Map(decks.map((deck) => [deck.id, deck]));
+// Global decks and deckMap - will be populated after loading JSON
+let decks = [];
+let deckMap = new Map();
 
 const card = document.getElementById("card");
 const cardWrap = document.getElementById("cardWrap");
@@ -51,18 +131,40 @@ const rightBtn = document.getElementById("rightBtn");
 const flipBtn = document.getElementById("flipBtn");
 const undoBtn = document.getElementById("undoBtn");
 const shuffleBtn = document.getElementById("shuffleBtn");
+const reverseBtn = document.getElementById("reverseBtn");
 const resetBtn = document.getElementById("resetBtn");
 const restartBtn = document.getElementById("restartBtn");
+
+// Test elements
+const testSection = document.getElementById("testSection");
+const testTitle = document.getElementById("testTitle");
+const testProgress = document.getElementById("testProgress");
+const testQuestion = document.getElementById("testQuestion");
+const testOptions = document.getElementById("testOptions");
+const testFeedback = document.getElementById("testFeedback");
+const testFeedbackText = document.getElementById("testFeedbackText");
+const nextQuestionBtn = document.getElementById("nextQuestionBtn");
+const testResults = document.getElementById("testResults");
+const testScore = document.getElementById("testScore");
+const testRestartBtn = document.getElementById("testRestartBtn");
+const backToDashboardBtn = document.getElementById("backToDashboardBtn");
+
+// Test state
+let currentTest = null;
+let testState = {
+  testId: null,
+  currentQuestion: 0,
+  score: 0,
+  answered: false,
+};
 
 const STORAGE_KEY = "historySwipeState_v2";
 
 const GROUP_ORDER = [
-  "Didieji rinkiniai",
-  "Valstybingumas",
-  "Kultūra ir mokslas",
-  "Žmogus ir aplinka",
-  "Istorikas, istorija ir istorinė kultūra",
-  "Specialūs rinkiniai",
+  "1. Istorikas, istorija ir istorinė kultūra",
+  "2. Valstybingumas: suverenitetas, idėjos, formos",
+  "3. Kultūra ir mokslas",
+  "4. Žmogus ir aplinka",
   "Asmenybės",
 ];
 
@@ -107,6 +209,7 @@ const createInitialState = () => ({
   unknown: [],
   history: [],
   randomize: false,
+  reverse: false,
   dragging: false,
   startX: 0,
   startY: 0,
@@ -681,6 +784,105 @@ const initDashboardState = () => {
   setDashboardVisible(true);
 };
 
+// Test Functions
+const startTest = (testId) => {
+  const tests = window.PRACTICE_TESTS || [];
+  const test = tests.find(t => t.id === testId);
+  
+  if (!test) {
+    console.error("Test not found:", testId);
+    return;
+  }
+  
+  currentTest = test;
+  testState = {
+    testId: testId,
+    currentQuestion: 0,
+    score: 0,
+    answered: false,
+  };
+  
+  setDashboardVisible(false);
+  if (deckSection) deckSection.hidden = true;
+  if (actionsSection) actionsSection.hidden = true;
+  if (viewToggleSection) viewToggleSection.hidden = true;
+  if (footer) footer.hidden = true;
+  
+  testSection.hidden = false;
+  testResults.hidden = true;
+  testFeedback.hidden = true;
+  
+  testTitle.textContent = test.title;
+  displayTestQuestion();
+};
+
+const displayTestQuestion = () => {
+  if (!currentTest || testState.currentQuestion >= currentTest.questions.length) {
+    showTestResults();
+    return;
+  }
+  
+  const question = currentTest.questions[testState.currentQuestion];
+  testProgress.textContent = `${testState.currentQuestion + 1} / ${currentTest.questions.length}`;
+  testQuestion.textContent = question.question;
+  
+  testOptions.innerHTML = '';
+  testFeedback.hidden = true;
+  testState.answered = false;
+  
+  question.options.forEach(option => {
+    const btn = document.createElement('button');
+    btn.className = 'test-option';
+    btn.innerHTML = `
+      <div class="test-option-letter">${option.letter}</div>
+      <div class="test-option-text">${option.text}</div>
+    `;
+    btn.addEventListener('click', () => handleTestAnswer(option.letter, question));
+    testOptions.appendChild(btn);
+  });
+};
+
+const handleTestAnswer = (selectedLetter, question) => {
+  if (testState.answered) return;
+  
+  testState.answered = true;
+  const isCorrect = selectedLetter === question.correct_answer;
+  
+  if (isCorrect) {
+    testState.score += 1;
+  }
+  
+  // Show all options with correct/incorrect highlighting
+  const options = document.querySelectorAll('.test-option');
+  options.forEach(btn => {
+    btn.disabled = true;
+    const letter = btn.querySelector('.test-option-letter').textContent;
+    if (letter === question.correct_answer) {
+      btn.classList.add('correct');
+    } else if (letter === selectedLetter && !isCorrect) {
+      btn.classList.add('incorrect');
+    }
+  });
+  
+  // Show feedback
+  testFeedback.hidden = false;
+  testFeedback.className = `test-feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+  testFeedbackText.innerHTML = `
+    <strong>${isCorrect ? '✓ Correct!' : '✗ Incorrect'}</strong><br>
+    ${question.correct_answer_text}
+  `;
+};
+
+const showTestResults = () => {
+  testQuestion.parentElement.hidden = true;
+  testOptions.hidden = true;
+  nextQuestionBtn.hidden = true;
+  
+  testResults.hidden = false;
+  const percentage = Math.round((testState.score / currentTest.questions.length) * 100);
+  testScore.textContent = `You scored ${testState.score} out of ${currentTest.questions.length} (${percentage}%)`;
+};
+
 leftBtn.addEventListener("click", () => animateSwipe("left"));
 rightBtn.addEventListener("click", () => animateSwipe("right"));
 flipBtn.addEventListener("click", handleFlip);
@@ -689,6 +891,27 @@ shuffleBtn.addEventListener("click", handleShuffle);
 resetBtn.addEventListener("click", handleReset);
 restartBtn.addEventListener("click", handleReset);
 continueBtn.addEventListener("click", handleContinueUnknown);
+
+// Test event listeners
+if (nextQuestionBtn) {
+  nextQuestionBtn.addEventListener("click", () => {
+    testState.currentQuestion += 1;
+    displayTestQuestion();
+  });
+}
+
+if (testRestartBtn) {
+  testRestartBtn.addEventListener("click", () => {
+    startTest(testState.testId);
+  });
+}
+
+if (backToDashboardBtn) {
+  backToDashboardBtn.addEventListener("click", () => {
+    testSection.hidden = true;
+    setDashboardVisible(true);
+  });
+}
 
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
@@ -777,4 +1000,6 @@ if (storedViewMode) {
 }
 
 updateProgress();
-initDashboardState();
+
+// Load decks from new_INFO.json
+loadDecksFromJSON();

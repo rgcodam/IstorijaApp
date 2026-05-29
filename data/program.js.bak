@@ -229,25 +229,6 @@ window.HISTORY_DECKS = [
     ]
   },
   {
-    "id": "1-istorikas-istorija-ir-istorin-kult-ra-kiti",
-    "title": "1. Istorikas, istorija ir istorinė kultūra — Kiti",
-    "description": "",
-    "group": "Istorija III gimnazijos klasė",
-    "tier": "small",
-    "cards": [
-      {
-        "front": "Albertas Kojalavičius-Vijūkas",
-        "back": "1609–1677, parašė 'Lietuvos istoriją' lotynų kalba – bandymas sistemingai aprašyti valstybės raidą.",
-        "type": "term"
-      },
-      {
-        "front": "Jonas Žemaitis-Vytautas",
-        "back": "2018 m. pripažintas Lietuvos valstybės vadovu – partizaninio pasipriešinimo legitimumo įtvirtinimas.",
-        "type": "term"
-      }
-    ]
-  },
-  {
     "id": "2-valstybingumas-suverenitetas-idėjos-formos",
     "title": "2. Valstybingumas: suverenitetas, idėjos, formos",
     "description": "",
@@ -1237,25 +1218,6 @@ window.HISTORY_DECKS = [
     ]
   },
   {
-    "id": "2-valstybingumas-suverenitetas-id-jos-formos-kiti",
-    "title": "2. Valstybingumas: suverenitetas, idėjos, formos — Kiti",
-    "description": "",
-    "group": "Istorija III gimnazijos klasė",
-    "tier": "small",
-    "cards": [
-      {
-        "front": "Aukščiausioji Taryba-Atkuriamasis Seimas",
-        "back": "1990–1992 m. Lietuvos parlamentas, priėmęs nepriklausomybės atkūrimo aktą.",
-        "type": "term"
-      },
-      {
-        "front": "Gabrielė Petkevičaitė-Bitė",
-        "back": "Rašytoja, lietuvių tautos švietėja, dalyvavusi Vilniaus konferencijoje.",
-        "type": "term"
-      }
-    ]
-  },
-  {
     "id": "3-kultūra-ir-mokslas",
     "title": "3. Kultūra ir mokslas",
     "description": "",
@@ -1880,30 +1842,6 @@ window.HISTORY_DECKS = [
     ]
   },
   {
-    "id": "3-kult-ra-ir-mokslas-kiti",
-    "title": "3. Kultūra ir mokslas — Kiti",
-    "description": "",
-    "group": "Istorija III gimnazijos klasė",
-    "tier": "small",
-    "cards": [
-      {
-        "front": "Alaiza Paškevič-Ciotka",
-        "back": "1876–1916, rašytoja, rėmusi lietuvių švietimą.",
-        "type": "term"
-      },
-      {
-        "front": "Vytautas Landsbergis-Žemkalnis",
-        "back": "1893–1993, architektas, kūręs Kauno modernizmo pastatus.",
-        "type": "term"
-      },
-      {
-        "front": "Sofija Kymantaitė-Čiurlionienė",
-        "back": "1886–1958, rašytoja, visuomenės veikėja.",
-        "type": "term"
-      }
-    ]
-  },
-  {
     "id": "4-žmogus-ir-aplinka",
     "title": "4. Žmogus ir aplinka",
     "description": "",
@@ -2288,6 +2226,95 @@ window.HISTORY_DECKS = [
       {
         "front": "Kopų užtvindymas",
         "back": "Miškininkų darbai Kuršių Nerijoje, stabilizavę smėlį.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "1-istorikas-istorija-ir-istorinė-kultūra-istoriografijos-autoriai-ir-kryptys",
+    "title": "1. Istorikas, istorija ir istorinė kultūra — Istoriografijos autoriai ir kryptys",
+    "description": "",
+    "group": "Istorija III gimnazijos klasė",
+    "tier": "small",
+    "cards": [
+      {
+        "front": "Albertas Kojalavičius-Vijūkas",
+        "back": "1609–1677, parašė 'Lietuvos istoriją' lotynų kalba – bandymas sistemingai aprašyti valstybės raidą.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "1-istorikas-istorija-ir-istorinė-kultūra-istorinė-atmintis-politika-ir-propaganda",
+    "title": "1. Istorikas, istorija ir istorinė kultūra — Istorinė atmintis, politika ir propaganda",
+    "description": "",
+    "group": "Istorija III gimnazijos klasė",
+    "tier": "small",
+    "cards": [
+      {
+        "front": "Jonas Žemaitis-Vytautas",
+        "back": "2018 m. pripažintas Lietuvos valstybės vadovu – partizaninio pasipriešinimo legitimumo įtvirtinimas.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "2-valstybingumas-suverenitetas-idėjos-formos-viduramžiai-feodalizmas-ir-monarchijos",
+    "title": "2. Valstybingumas: suverenitetas, idėjos, formos — Viduramžiai, feodalizmas ir monarchijos",
+    "description": "",
+    "group": "Istorija III gimnazijos klasė",
+    "tier": "small",
+    "cards": [
+      {
+        "front": "Aukščiausioji Taryba-Atkuriamasis Seimas",
+        "back": "1990–1992 m. Lietuvos parlamentas, priėmęs nepriklausomybės atkūrimo aktą.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "2-valstybingumas-suverenitetas-idėjos-formos-moderni-lietuvos-valstybė-ir-euroatlantinė-integracija",
+    "title": "2. Valstybingumas: suverenitetas, idėjos, formos — Moderni Lietuvos valstybė ir euroatlantinė integracija",
+    "description": "",
+    "group": "Istorija III gimnazijos klasė",
+    "tier": "small",
+    "cards": [
+      {
+        "front": "Gabrielė Petkevičaitė-Bitė",
+        "back": "Rašytoja, lietuvių tautos švietėja, dalyvavusi Vilniaus konferencijoje.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "3-kultūra-ir-mokslas-ldk-ir-lietuvos-raštija-švietimas-kultūra",
+    "title": "3. Kultūra ir mokslas — LDK ir Lietuvos raštija, švietimas, kultūra",
+    "description": "",
+    "group": "Istorija III gimnazijos klasė",
+    "tier": "small",
+    "cards": [
+      {
+        "front": "Alaiza Paškevič-Ciotka",
+        "back": "1876–1916, rašytoja, rėmusi lietuvių švietimą.",
+        "type": "term"
+      }
+    ]
+  },
+  {
+    "id": "3-kultūra-ir-mokslas-tarpukario-ir-šiuolaikinės-lietuvos-kultūra",
+    "title": "3. Kultūra ir mokslas — Tarpukario ir šiuolaikinės Lietuvos kultūra",
+    "description": "",
+    "group": "Istorija III gimnazijos klasė",
+    "tier": "small",
+    "cards": [
+      {
+        "front": "Vytautas Landsbergis-Žemkalnis",
+        "back": "1893–1993, architektas, kūręs Kauno modernizmo pastatus.",
+        "type": "term"
+      },
+      {
+        "front": "Sofija Kymantaitė-Čiurlionienė",
+        "back": "1886–1958, rašytoja, visuomenės veikėja.",
         "type": "term"
       }
     ]
