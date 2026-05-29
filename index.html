@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="lt">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,9 +11,13 @@
       <header class="topbar">
         <div class="brand">
           <span class="brand__title">History Swipe Deck</span>
-          <span class="brand__subtitle">Swipe to learn Lithuanian figures</span>
+          <span class="brand__subtitle">Swipe to learn Lithuanian history</span>
         </div>
         <div class="topbar__controls">
+          <div class="deck-status" aria-live="polite">
+            <span class="deck-status__label">Deck</span>
+            <span class="deck-status__name" id="activeDeckName">Not selected</span>
+          </div>
           <div class="progress">
             <div class="progress__stats">
               <span id="progressText">0 / 0</span>
@@ -24,13 +28,38 @@
               <div id="progressFill"></div>
             </div>
           </div>
+          <button class="button button--ghost" id="openDashboard" type="button">
+            Decks
+          </button>
           <button class="button button--ghost theme-toggle" id="themeToggle" type="button" aria-pressed="false">
             Dark mode
           </button>
         </div>
       </header>
 
-      <main class="deck">
+      <section class="dashboard" id="dashboard">
+        <div class="dashboard__hero">
+          <div class="dashboard__copy">
+            <p class="dashboard__eyebrow">Istorijos programa</p>
+            <h1>Pasirink, ką nori mokytis</h1>
+            <p class="dashboard__lead">
+              Rinkis didžiuosius rinkinius, mažas temas arba specialius rinkinius. Tęsk nuo
+              ten, kur sustojai.
+            </p>
+          </div>
+          <div class="dashboard__actions">
+            <button class="button button--primary" id="resumeDeck" type="button" hidden>
+              Continue last deck
+            </button>
+            <button class="button button--ghost" id="closeDashboard" type="button" hidden>
+              Back to deck
+            </button>
+          </div>
+        </div>
+        <div class="dashboard__groups" id="deckGroups"></div>
+      </section>
+
+      <main class="deck" id="deckSection" hidden>
         <div class="card-wrap" id="cardWrap">
           <div class="card" id="card" aria-live="polite">
             <div class="card__inner">
@@ -63,7 +92,7 @@
         </div>
       </main>
 
-      <section class="actions">
+      <section class="actions" id="actionsSection" hidden>
         <button class="button" id="leftBtn">Swipe Left (Review)</button>
         <button class="button button--primary" id="flipBtn">Flip</button>
         <button class="button" id="rightBtn">Swipe Right (Know)</button>
@@ -72,7 +101,7 @@
         <button class="button button--ghost" id="resetBtn">Reset</button>
       </section>
 
-      <section class="view-toggle" aria-label="Front of card view">
+      <section class="view-toggle" id="viewToggleSection" aria-label="Front of card view" hidden>
         <span class="view-toggle__label">Front view</span>
         <div class="view-toggle__group" role="group" aria-label="Front view options">
           <input type="radio" name="viewMode" id="viewBoth" value="both" checked>
@@ -84,12 +113,13 @@
         </div>
       </section>
 
-      <footer class="footer">
+      <footer class="footer" id="footer" hidden>
         <span>Swipe or use arrow keys. Space flips the card.</span>
       </footer>
     </div>
 
     <script src="data/figures.js"></script>
+    <script src="data/program.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
