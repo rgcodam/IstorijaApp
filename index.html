@@ -7,146 +7,24 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="page">
+    <div class="page landing-page">
       <header class="topbar">
         <div class="brand">
           <span class="brand__title">Istorija for Bums</span>
-          <span class="brand__subtitle">Sveiki atvykę į istorijos mokymą!</span>
-        </div>
-        <div class="topbar__controls">
-          <div class="deck-status" aria-live="polite">
-            <span class="deck-status__label">Deck</span>
-            <span class="deck-status__name" id="activeDeckName">Not selected</span>
-          </div>
-          <div class="progress">
-            <div class="progress__stats">
-              <span id="progressText">0 / 0</span>
-              <span id="rightCount">Known: 0</span>
-              <span id="leftCount">Review: 0</span>
-            </div>
-            <div class="progress__bar">
-              <div id="progressFill"></div>
-            </div>
-          </div>
-          <button class="button button--ghost" id="openDashboard" type="button">
-            Decks
-          </button>
-          <button class="button button--ghost theme-toggle" id="themeToggle" type="button" aria-pressed="false">
-            Dark mode
-          </button>
+          <span class="brand__subtitle">Pasirink mokymosi režimą</span>
         </div>
       </header>
 
-      <section class="dashboard" id="dashboard">
-        <div class="dashboard__hero">
-          <div class="dashboard__copy">
-            <p class="dashboard__eyebrow">Istorijos programa</p>
-            <h1>Pasirink, ką nori mokytis</h1>
-            <p class="dashboard__lead">
-              Rinkis didžiuosius rinkinius, mažas temas arba specialius rinkinius. Tęsk nuo
-              ten, kur sustojai.
-            </p>
-          </div>
-          <div class="dashboard__actions">
-            <button class="button button--primary" id="resumeDeck" type="button" hidden>
-              Continue last deck
-            </button>
-            <button class="button button--ghost" id="closeDashboard" type="button" hidden>
-              Back to deck
-            </button>
-          </div>
-        </div>
-        <div class="dashboard__groups" id="deckGroups"></div>
-      </section>
-
-      <main class="deck" id="deckSection" hidden>
-        <div class="card-wrap" id="cardWrap">
-          <div class="card" id="card" aria-live="polite">
-            <div class="card__inner">
-              <div class="card__face card__face--front">
-                <div class="card__image">
-                  <img id="figureImage" src="" alt="">
-                </div>
-                <div class="card__content">
-                  <p id="figureDescription"></p>
-                </div>
-                <div class="card__indicator card__indicator--left">Review</div>
-                <div class="card__indicator card__indicator--right">Know</div>
-              </div>
-              <div class="card__face card__face--back">
-                <div class="card__name" id="figureName"></div>
-                <div class="card__hint">Tap or press Space to flip back</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div style="height: 20px;"></div>
-
-        <div class="test-section" id="testSection" hidden>
-          <div class="test-header">
-            <h2 id="testTitle"></h2>
-            <div class="test-progress">
-              <span id="testProgress">1 / 30</span>
-            </div>
-          </div>
-          <div class="test-content">
-            <p id="testQuestion"></p>
-            <div class="test-options" id="testOptions"></div>
-            <div class="test-feedback" id="testFeedback" hidden>
-              <p id="testFeedbackText"></p>
-              <button class="button button--primary" id="nextQuestionBtn">Next Question</button>
-            </div>
-          </div>
-          <div class="test-results" id="testResults" hidden>
-            <h2>Test Complete!</h2>
-            <p id="testScore"></p>
-            <button class="button button--primary" id="testRestartBtn">Restart Test</button>
-            <button class="button" id="backToDashboardBtn">Back to Dashboard</button>
-          </div>
-        </div>
-
-        <div class="completion" id="completion" hidden>
-          <h2>All done</h2>
-          <p id="completionStats"></p>
-          <p id="completionHint" class="completion__hint"></p>
-          <div class="completion__actions">
-            <button id="continueBtn" class="button">Continue Unknown</button>
-            <button id="restartBtn" class="button button--primary">Restart All</button>
-          </div>
-        </div>
+      <main class="landing-cards">
+        <a class="landing-card" href="learning.html">
+          <span class="landing-card__title">Mokymasis</span>
+          <span class="landing-card__desc">Pasirink pažinimo korteles ir testus.</span>
+        </a>
+        <a class="landing-card" href="timeline.html">
+          <span class="landing-card__title">Laiko juosta</span>
+          <span class="landing-card__desc">Nusileisk per didžiausius istorijos momentus.</span>
+        </a>
       </main>
-
-      <section class="actions" id="actionsSection" hidden>
-        <button class="button" id="leftBtn">Swipe Left (Review)</button>
-        <button class="button button--primary" id="flipBtn">Flip</button>
-        <button class="button" id="rightBtn">Swipe Right (Know)</button>
-        <button class="button button--ghost" id="undoBtn" disabled>Undo</button>
-        <button class="button randomize-toggle" id="shuffleBtn" type="button" aria-pressed="false">Randomizer: Off</button>
-        <button class="button randomize-toggle" id="reverseBtn" type="button" aria-pressed="false">Answer First: Off</button>
-        <button class="button button--ghost" id="resetBtn">Reset</button>
-      </section>
-
-      <section class="view-toggle" id="viewToggleSection" aria-label="Front of card view" hidden>
-        <span class="view-toggle__label">Front view</span>
-        <div class="view-toggle__group" role="group" aria-label="Front view options">
-          <input type="radio" name="viewMode" id="viewBoth" value="both" checked>
-          <label for="viewBoth">Image + Text</label>
-          <input type="radio" name="viewMode" id="viewImage" value="image">
-          <label for="viewImage">Image only</label>
-          <input type="radio" name="viewMode" id="viewText" value="text">
-          <label for="viewText">Text only</label>
-        </div>
-      </section>
-
-      <footer class="footer" id="footer" hidden>
-        <span>Swipe or use arrow keys. Space flips the card.</span>
-      </footer>
     </div>
-
-    <script src="data/figures.js"></script>
-    <script src="data/new_info.js"></script>
-    <script src="data/newer_info.js"></script>
-    <script src="script.js"></script>
   </body>
 </html>

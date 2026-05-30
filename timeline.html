@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="lt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Istorija for Bums — Laiko juosta</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="page timeline-page">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand__title">Istorija for Bums</span>
+          <span class="brand__subtitle">Laiko juosta</span>
+        </div>
+        <div class="topbar__controls">
+          <a class="button button--ghost" href="index.html">Grįžti namo</a>
+        </div>
+      </header>
+
+      <section class="timeline-header">
+        <div class="timeline-header__copy">
+          <p class="dashboard__eyebrow">Istorijos įvykiai</p>
+          <h1>Rask didžiausius momentus Lietuvoje</h1>
+          <p class="dashboard__lead">
+            Naršyk per laiko juostą su svarbiausiais istoriniais įvykiais. Filtruok pagal temas arba tiesiog slink horizontaliai ir rask įdomybes.
+          </p>
+        </div>
+        <div class="timeline-controls">
+          <label for="timelineSectionFilter">Filtruoti pagal skyrių:</label>
+          <select id="timelineSectionFilter">
+            <option value="all">Visi skyriūs</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="timeline-scroll" id="timelineScroll">
+        <div class="timeline-track" id="timelineTrack"></div>
+      </section>
+    </div>
+
+    <script src="data/dates_data.js"></script>
+    <script src="timeline.js"></script>
+  </body>
+</html>

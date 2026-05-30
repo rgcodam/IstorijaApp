@@ -21,15 +21,16 @@ const loadDecksFromJSON = async () => {
       data.subcategories_by_subject.forEach((section, sectionIndex) => {
         const sectionTitle = section.section || `Section ${sectionIndex + 1}`;
         const group = sectionTitle;
-        
+        const subjectCards = [];
+
         if (section.subcategories && Array.isArray(section.subcategories)) {
           section.subcategories.forEach((subcategory, subIndex) => {
             const subcategoryTitle = subcategory.subcategory || `Subcategory ${subIndex + 1}`;
             const deckId = `deck-${sectionIndex}-${subIndex}`;
             
             const cards = (subcategory.cards || []).map((card) => ({
-              front: card.a || "",
-              back: card.q || "",
+              front: card.q || "",
+              back: card.a || "",
               type: card.type_category ? "term" : "term",
             }));
             
@@ -42,7 +43,19 @@ const loadDecksFromJSON = async () => {
                 tier: "small",
                 cards: cards,
               });
+              subjectCards.push(...cards);
             }
+          });
+        }
+
+        if (subjectCards.length > 0) {
+          programDecks.push({
+            id: `subject-${sectionIndex}`,
+            title: sectionTitle,
+            description: `Visos temos ${sectionTitle}`,
+            group: group,
+            tier: "big",
+            cards: subjectCards,
           });
         }
       });
@@ -68,7 +81,7 @@ const reinitializeDecks = () => {
       id: test.id,
       title: test.title,
       description: test.description,
-      group: "Practice Tests",
+      group: "Testai",
       tier: "special",
       isTest: true,
       questions: test.questions,
@@ -166,6 +179,7 @@ const GROUP_ORDER = [
   "3. Kultūra ir mokslas",
   "4. Žmogus ir aplinka",
   "Asmenybės",
+  "Testai",
 ];
 
 const buildDeck = (ids, max) => {
@@ -260,28 +274,32 @@ const getStoredState = () => {
 };
 
 const saveState = (override = {}) => {
-  if (!state.deckId) {
-    return;
-  }
   const stored = getStoredState();
   const viewMode = override.viewMode || (card ? card.dataset.view : "both") || "both";
   const theme = override.theme || document.body.dataset.theme || "light";
   const nextRandomize =
     typeof override.randomize === "boolean" ? override.randomize : state.randomize;
+  const nextReverse =
+    typeof override.reverse === "boolean" ? override.reverse : state.reverse;
 
-  stored.activeDeckId = state.deckId;
+  if (state.deckId) {
+    stored.activeDeckId = state.deckId;
+  }
   stored.viewMode = viewMode;
   stored.theme = theme;
+  stored.reverse = nextReverse;
 
-  stored.decks[state.deckId] = {
-    deck: state.deck,
-    index: state.index,
-    left: state.left,
-    right: state.right,
-    unknown: state.unknown,
-    history: state.history,
-    randomize: nextRandomize,
-  };
+  if (state.deckId) {
+    stored.decks[state.deckId] = {
+      deck: state.deck,
+      index: state.index,
+      left: state.left,
+      right: state.right,
+      unknown: state.unknown,
+      history: state.history,
+      randomize: nextRandomize,
+    };
+  }
 
   localStorage.setItem(STORAGE_KEY, JSON.stringify(stored));
 };
@@ -370,11 +388,12 @@ const setCardData = () => {
   }
 
   showCard();
+  const isReversed = state.reverse;
   const imageSrc = cardData.image || placeholderImage;
   figureImage.src = imageSrc;
-  figureImage.alt = cardData.imageAlt || cardData.back || cardData.front || "History card";
-  figureDescription.textContent = cardData.front || "";
-  figureName.textContent = cardData.back || "";
+  figureImage.alt = cardData.imageAlt || (isReversed ? cardData.front : cardData.back) || (isReversed ? cardData.back : cardData.front) || "History card";
+  figureDescription.textContent = isReversed ? cardData.back || "" : cardData.front || "";
+  figureName.textContent = isReversed ? cardData.front || "" : cardData.back || "";
 
   if (card) {
     card.classList.toggle("card--placeholder", !cardData.image);
@@ -527,6 +546,15 @@ const handleUndo = () => {
   setCardData();
 };
 
+const updateReverseButton = () => {
+  if (!reverseBtn) {
+    return;
+  }
+  reverseBtn.classList.toggle("is-active", state.reverse);
+  reverseBtn.setAttribute("aria-pressed", String(state.reverse));
+  reverseBtn.textContent = state.reverse ? "Answer First: On" : "Answer First: Off";
+};
+
 const handleShuffle = () => {
   if (!state.deckId) {
     return;
@@ -540,6 +568,13 @@ const handleShuffle = () => {
   }
   updateRandomizeButton();
   saveState({ randomize: state.randomize });
+  setCardData();
+};
+
+const handleReverseToggle = () => {
+  state.reverse = !state.reverse;
+  updateReverseButton();
+  saveState({ reverse: state.reverse });
   setCardData();
 };
 
@@ -605,6 +640,7 @@ const applyDeckState = (deckId, storedDeck) => {
   }
 
   updateRandomizeButton();
+  updateReverseButton();
   setCardData();
 };
 
@@ -730,7 +766,8 @@ const renderDashboard = (activeId) => {
         pill.textContent = getTierLabel(deck);
 
         const count = document.createElement("span");
-        count.textContent = `${deck.cards.length} kortų`;
+        const itemCount = deck.cards ? deck.cards.length : deck.questions ? deck.questions.length : 0;
+        count.textContent = `${itemCount} ${deck.questions ? "klausimų" : "kortų"}`;
 
         metaEl.appendChild(pill);
         metaEl.appendChild(count);
@@ -755,6 +792,11 @@ const selectDeck = (deckId, useStored) => {
   const stored = getStoredState();
   const deck = deckMap.get(deckId);
   if (!deck) {
+    return;
+  }
+
+  if (deck.isTest) {
+    startTest(deck.id);
     return;
   }
 
@@ -811,6 +853,9 @@ const startTest = (testId) => {
   testSection.hidden = false;
   testResults.hidden = true;
   testFeedback.hidden = true;
+  testQuestion.parentElement.hidden = false;
+  testOptions.hidden = false;
+  nextQuestionBtn.hidden = false;
   
   testTitle.textContent = test.title;
   displayTestQuestion();
@@ -891,6 +936,10 @@ shuffleBtn.addEventListener("click", handleShuffle);
 resetBtn.addEventListener("click", handleReset);
 restartBtn.addEventListener("click", handleReset);
 continueBtn.addEventListener("click", handleContinueUnknown);
+
+if (reverseBtn) {
+  reverseBtn.addEventListener("click", handleReverseToggle);
+}
 
 // Test event listeners
 if (nextQuestionBtn) {
@@ -982,9 +1031,11 @@ window.addEventListener("keydown", (event) => {
 const storedSettings = getStoredState();
 const storedViewMode = storedSettings.viewMode || null;
 const storedTheme = storedSettings.theme || null;
+state.reverse = storedSettings.reverse === true;
 
 applyTheme(storedTheme || getPreferredTheme());
 updateRandomizeButton();
+updateReverseButton();
 
 if (storedViewMode) {
   const storedRadio = document.querySelector(`input[name=\"viewMode\"][value=\"${storedViewMode}\"]`);
